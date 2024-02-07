@@ -1,0 +1,62 @@
+site_name: "Aeromancy"
+site_description: "A framework for performing reproducible AI and ML."
+site_url: "https://quant-aq.github.io/aeromancy"
+repo_url: "https://github.com/quant-aq/aeromancy"
+repo_name: "quant-aq/aeromancy"
+site_dir: "site"
+
+nav:
+  - Home:
+    - Overview: index.md
+    - Scaffolding and new projects: scaffolding.md
+    - Tasks, Trackers, and Actions: tasks.md
+  - Code Reference: reference/
+
+theme:
+  name: material
+  palette:
+    primary: deep purple
+    accent: teal
+  font:
+    text: Open Sans
+    code: Fira Code
+
+markdown_extensions:
+  - admonition
+  - pymdownx.emoji
+  - pymdownx.magiclink
+  - pymdownx.snippets:
+      base_path:
+      - docs
+      - ../README.md
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - toc:
+      permalink: "#"
+
+
+plugins:
+- search
+- gen-files:
+    scripts:
+    - gen_ref_pages.py
+- section-index
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        paths: ["../src"]
+        options:
+          docstring_style: numpy
+- literate-nav:
+    nav_file: SUMMARY.md
+
+watch:
+  - "../src"
+  - "../README.md"

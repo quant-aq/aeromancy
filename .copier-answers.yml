@@ -1,0 +1,19 @@
+# Changes here will be overwritten by Copier
+_commit: 0.5.0
+_src_path: gh:dmcc/copier-pdm
+author_email: david.mcclosky@quant-aq.com
+author_fullname: David McClosky
+author_username: dmcc
+build_doc: true
+copyright_date: '2024'
+copyright_holder: QuantAQ Inc.
+copyright_holder_email: david.mcclosky@quant-aq.com
+copyright_license: Apache-2.0
+project_description: Experimental code for data science projects -- not intended for
+    production use.
+project_name: Data Science Experimental
+python_package_distribution_name: aeromancy
+python_package_import_name: aeromancy
+python_package_requires_python: '>=3.10.5'
+repository_name: aeromancy
+repository_namespace: quant-aq
