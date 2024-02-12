@@ -1,0 +1,4150 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A framework for performing reproducible AI and ML.">
+      
+      
+      
+        <link rel="canonical" href="https://quant-aq.github.io/aeromancy/reference/aeromancy/artifacts/">
+      
+      
+        <link rel="prev" href="../aeroview/">
+      
+      
+        <link rel="next" href="../click_options/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>artifacts - Aeromancy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aeromancy.artifacts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Aeromancy" class="md-header__button md-logo" aria-label="Aeromancy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Aeromancy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              artifacts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/quant-aq/aeromancy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    quant-aq/aeromancy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Aeromancy" class="md-nav__button md-logo" aria-label="Aeromancy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Aeromancy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/quant-aq/aeromancy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    quant-aq/aeromancy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../scaffolding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scaffolding and new projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasks, Trackers, and Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Code Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Code Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    aeromancy
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            aeromancy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../action/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    action
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../action_builder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    action_builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../action_runner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    action_runner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aeroview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    aeroview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    artifacts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    artifacts
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aeromancy.artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      artifacts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      AeromancyArtifact
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AeromancyArtifact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact.__post_init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __post_init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact.as_wandb_artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      as_wandb_artifact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact.from_wandb_api_artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_wandb_api_artifact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact.to_s3_viewer_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_s3_viewer_url
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.Artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artifacts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.Artifacts.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.Artifacts.declare_input" class="md-nav__link">
+    <span class="md-ellipsis">
+      declare_input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.Artifacts.declare_output" class="md-nav__link">
+    <span class="md-ellipsis">
+      declare_output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName" class="md-nav__link">
+    <span class="md-ellipsis">
+      WandbArtifactName
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WandbArtifactName">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.__post_init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __post_init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.__str__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __str__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.incorporate_overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      incorporate_overrides
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      matches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.parse" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.resolve_artifact_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      resolve_artifact_name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../click_options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    click_options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export_utils/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    export_utils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fake_tracker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fake_tracker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rerun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    rerun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../runner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    runner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../runtime_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    runtime_environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    s3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../struct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    struct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tracker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tracker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wandb_tracker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wandb_tracker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bogus_aeromain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    bogus_aeromain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aeromancy.artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      artifacts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      AeromancyArtifact
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AeromancyArtifact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact.__post_init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __post_init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact.as_wandb_artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      as_wandb_artifact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact.from_wandb_api_artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_wandb_api_artifact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.AeromancyArtifact.to_s3_viewer_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_s3_viewer_url
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.Artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artifacts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.Artifacts.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.Artifacts.declare_input" class="md-nav__link">
+    <span class="md-ellipsis">
+      declare_input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.Artifacts.declare_output" class="md-nav__link">
+    <span class="md-ellipsis">
+      declare_output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName" class="md-nav__link">
+    <span class="md-ellipsis">
+      WandbArtifactName
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WandbArtifactName">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.__post_init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __post_init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.__str__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __str__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.incorporate_overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      incorporate_overrides
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      matches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.parse" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeromancy.artifacts.WandbArtifactName.resolve_artifact_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      resolve_artifact_name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>artifacts</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="aeromancy.artifacts"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Library for interfacing with artifacts (files stored and tracked externally).</p>
+<p>This is effectively a bridge between Weights and Biases artifacts and S3-backed
+version objects.</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="aeromancy.artifacts.AeromancyArtifact" class="doc doc-heading">
+          <code>AeromancyArtifact</code>
+
+
+<a href="#aeromancy.artifacts.AeromancyArtifact" class="headerlink" title="Permanent link">#</a></h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="msgspec.Struct">Struct</span></code></p>
+
+  
+      <p>External artifact produced and/or consumed by Aeromancy <code>Action</code>s.</p>
+<p>This class includes information to simultaneously track external files using
+Weights and Biases and a S3-compatible storage provider.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code><span title="aeromancy.artifacts.AeromancyArtifact.name">name</span></code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The artifact name (should comply with Weights and Biases naming scheme,
+see <code>validate_wandb_artifact_string</code>).</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="aeromancy.artifacts.AeromancyArtifact.artifact_type">artifact_type</span></code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Free text string to be associated with the artifact (should comply with
+Weights and Biases naming scheme, see <code>validate_wandb_artifact_string</code>).
+Semantics are up to project-specific conventions, but recommendation is
+a simple human-readable description of the extension.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="aeromancy.artifacts.AeromancyArtifact.s3">s3</span></code></td>
+          <td>
+                <code>list[<a class="autorefs autorefs-internal" title="aeromancy.s3.VersionedS3Object" href="../s3/#aeromancy.s3.VersionedS3Object">VersionedS3Object</a>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>S3 references for the contents of this artifact.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">AeromancyArtifact</span><span class="p">(</span><span class="n">msgspec</span><span class="o">.</span><span class="n">Struct</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;External artifact produced and/or consumed by Aeromancy `Action`s.</span>
+
+<span class="sd">    This class includes information to simultaneously track external files using</span>
+<span class="sd">    Weights and Biases and a S3-compatible storage provider.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name</span>
+<span class="sd">        The artifact name (should comply with Weights and Biases naming scheme,</span>
+<span class="sd">        see `validate_wandb_artifact_string`).</span>
+<span class="sd">    artifact_type</span>
+<span class="sd">        Free text string to be associated with the artifact (should comply with</span>
+<span class="sd">        Weights and Biases naming scheme, see `validate_wandb_artifact_string`).</span>
+<span class="sd">        Semantics are up to project-specific conventions, but recommendation is</span>
+<span class="sd">        a simple human-readable description of the extension.</span>
+<span class="sd">    s3</span>
+<span class="sd">        S3 references for the contents of this artifact.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">artifact_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">s3</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">VersionedS3Object</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Validate our inputs.&quot;&quot;&quot;</span>
+        <span class="c1"># We don&#39;t know for sure that Weights and Biases holds artifact type</span>
+        <span class="c1"># strings subject to the same constraints as artifact name, but we&#39;ll</span>
+        <span class="c1"># enforce it here out of paranoia.</span>
+        <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;artifact&quot;</span><span class="p">)</span>
+        <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">artifact_type</span><span class="p">,</span> <span class="s2">&quot;artifact type&quot;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_wandb_api_artifact</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">wandb_api_artifact</span><span class="p">:</span> <span class="n">WandbApiArtifact</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an `AeromancyArtifact` from a Weights and Biases API artifact.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        wandb_api_artifact</span>
+<span class="sd">            Artifact to convert. Note that this is a Weights and Biases *API*</span>
+<span class="sd">            Artifact, which is distinct from the typical Weights and Biases</span>
+<span class="sd">            Artifact.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            An `AeromancyArtifact` corresponding to `wandb_api_artifact`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">s3_objects</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">manifest_value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">wandb_api_artifact</span><span class="o">.</span><span class="n">manifest</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">manifest_value</span><span class="o">.</span><span class="n">ref</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No URI associated with manifest entry&quot;</span><span class="p">)</span>
+            <span class="n">aeromancy_uri</span> <span class="o">=</span> <span class="n">hyperlink</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">manifest_value</span><span class="o">.</span><span class="n">ref</span><span class="p">)</span>
+            <span class="n">s3</span> <span class="o">=</span> <span class="n">VersionedS3Object</span><span class="o">.</span><span class="n">from_aeromancy_uri</span><span class="p">(</span><span class="n">aeromancy_uri</span><span class="p">)</span>
+            <span class="n">s3_objects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span>
+
+        <span class="n">artifact_type</span> <span class="o">=</span> <span class="n">wandb_api_artifact</span><span class="o">.</span><span class="n">type</span>
+        <span class="n">artifact_name</span> <span class="o">=</span> <span class="n">WandbArtifactName</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">wandb_api_artifact</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">AeromancyArtifact</span><span class="p">(</span>
+            <span class="n">s3</span><span class="o">=</span><span class="n">s3_objects</span><span class="p">,</span>
+            <span class="n">artifact_type</span><span class="o">=</span><span class="n">artifact_type</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">artifact_name</span><span class="o">.</span><span class="n">artifact_name</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">as_wandb_artifact</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">wandb</span><span class="o">.</span><span class="n">Artifact</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert this into a Weights and Biases `Artifact`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        metadata, optional</span>
+<span class="sd">            Optional fields to associate with the `Artifact`. These will be</span>
+<span class="sd">            stored and accessible on Weights and Biases.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            This object represented as a Weights and Biases `Artifact`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">primary_s3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># Metadata here is intended as a debugging aid.</span>
+        <span class="c1"># We make a copy since we&#39;re going to modify it and the caller doesn&#39;t expect it</span>
+        <span class="c1"># to change.</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">metadata</span> <span class="ow">or</span> <span class="p">{})</span>
+        <span class="n">metadata</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+            <span class="n">primary_s3_key</span><span class="o">=</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+            <span class="n">primary_s3_bucket</span><span class="o">=</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+            <span class="n">primary_s3_version</span><span class="o">=</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
+            <span class="c1"># For viewing this Artifact on an S3 viewer webpage.</span>
+            <span class="n">viewer_url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">to_s3_viewer_url</span><span class="p">(),</span>
+            <span class="n">num_files</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">),</span>
+        <span class="p">)</span>
+
+        <span class="n">description</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">bucket</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">description</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="s2"> (+</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> others)&quot;</span>
+        <span class="n">artifact</span> <span class="o">=</span> <span class="n">wandb</span><span class="o">.</span><span class="n">Artifact</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">artifact_type</span><span class="p">,</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="c1"># We need an external reference so W&amp;B knows when it changes.</span>
+        <span class="k">for</span> <span class="n">s3</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">:</span>
+            <span class="n">artifact</span><span class="o">.</span><span class="n">add_reference</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">s3</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">to_aeromancy_uri</span><span class="p">()))</span>
+        <span class="k">return</span> <span class="n">artifact</span>
+
+    <span class="c1"># TODO: Generalize this for non-DigitalOcean users.</span>
+    <span class="k">def</span> <span class="nf">to_s3_viewer_url</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hyperlink</span><span class="o">.</span><span class="n">URL</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a URL to view the Artifact files on a web-based S3 viewer.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            URL for viewing the Artifact.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">primary_s3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">query</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># View the parent directory in DigitalOcean.</span>
+            <span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">hyperlink</span><span class="o">.</span><span class="n">URL</span><span class="p">(</span>
+            <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+            <span class="n">host</span><span class="o">=</span><span class="s2">&quot;cloud.digitalocean.com&quot;</span><span class="p">,</span>
+            <span class="n">path</span><span class="o">=</span><span class="p">(</span>
+                <span class="s2">&quot;spaces&quot;</span><span class="p">,</span>
+                <span class="n">primary_s3</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
+        <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.AeromancyArtifact.__post_init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__post_init__</span><span class="p">()</span></code>
+
+<a href="#aeromancy.artifacts.AeromancyArtifact.__post_init__" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Validate our inputs.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Validate our inputs.&quot;&quot;&quot;</span>
+    <span class="c1"># We don&#39;t know for sure that Weights and Biases holds artifact type</span>
+    <span class="c1"># strings subject to the same constraints as artifact name, but we&#39;ll</span>
+    <span class="c1"># enforce it here out of paranoia.</span>
+    <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;artifact&quot;</span><span class="p">)</span>
+    <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">artifact_type</span><span class="p">,</span> <span class="s2">&quot;artifact type&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.AeromancyArtifact.as_wandb_artifact" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">as_wandb_artifact</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#aeromancy.artifacts.AeromancyArtifact.as_wandb_artifact" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Convert this into a Weights and Biases <code>Artifact</code>.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>metadata</code></td>
+          <td>
+                <code>dict | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Optional fields to associate with the <code>Artifact</code>. These will be
+stored and accessible on Weights and Biases.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>optional</code></td>
+          <td>
+                <code>dict | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Optional fields to associate with the <code>Artifact</code>. These will be
+stored and accessible on Weights and Biases.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>    This object represented as a Weights and Biases `Artifact`.</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">as_wandb_artifact</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">wandb</span><span class="o">.</span><span class="n">Artifact</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert this into a Weights and Biases `Artifact`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    metadata, optional</span>
+<span class="sd">        Optional fields to associate with the `Artifact`. These will be</span>
+<span class="sd">        stored and accessible on Weights and Biases.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        This object represented as a Weights and Biases `Artifact`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">primary_s3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># Metadata here is intended as a debugging aid.</span>
+    <span class="c1"># We make a copy since we&#39;re going to modify it and the caller doesn&#39;t expect it</span>
+    <span class="c1"># to change.</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">metadata</span> <span class="ow">or</span> <span class="p">{})</span>
+    <span class="n">metadata</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+        <span class="n">primary_s3_key</span><span class="o">=</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+        <span class="n">primary_s3_bucket</span><span class="o">=</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+        <span class="n">primary_s3_version</span><span class="o">=</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
+        <span class="c1"># For viewing this Artifact on an S3 viewer webpage.</span>
+        <span class="n">viewer_url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">to_s3_viewer_url</span><span class="p">(),</span>
+        <span class="n">num_files</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">description</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">bucket</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="s2"> (+</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> others)&quot;</span>
+    <span class="n">artifact</span> <span class="o">=</span> <span class="n">wandb</span><span class="o">.</span><span class="n">Artifact</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">artifact_type</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># We need an external reference so W&amp;B knows when it changes.</span>
+    <span class="k">for</span> <span class="n">s3</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">:</span>
+        <span class="n">artifact</span><span class="o">.</span><span class="n">add_reference</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">s3</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">to_aeromancy_uri</span><span class="p">()))</span>
+    <span class="k">return</span> <span class="n">artifact</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.AeromancyArtifact.from_wandb_api_artifact" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">from_wandb_api_artifact</span><span class="p">(</span><span class="n">wandb_api_artifact</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#aeromancy.artifacts.AeromancyArtifact.from_wandb_api_artifact" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create an <code>AeromancyArtifact</code> from a Weights and Biases API artifact.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>wandb_api_artifact</code></td>
+          <td>
+                <code><span title="wandb.sdk.artifacts.artifact.Artifact">Artifact</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Artifact to convert. Note that this is a Weights and Biases <em>API</em>
+Artifact, which is distinct from the typical Weights and Biases
+Artifact.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>    An `AeromancyArtifact` corresponding to `wandb_api_artifact`</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">from_wandb_api_artifact</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">wandb_api_artifact</span><span class="p">:</span> <span class="n">WandbApiArtifact</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create an `AeromancyArtifact` from a Weights and Biases API artifact.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    wandb_api_artifact</span>
+<span class="sd">        Artifact to convert. Note that this is a Weights and Biases *API*</span>
+<span class="sd">        Artifact, which is distinct from the typical Weights and Biases</span>
+<span class="sd">        Artifact.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        An `AeromancyArtifact` corresponding to `wandb_api_artifact`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">s3_objects</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">manifest_value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">wandb_api_artifact</span><span class="o">.</span><span class="n">manifest</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="k">if</span> <span class="n">manifest_value</span><span class="o">.</span><span class="n">ref</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No URI associated with manifest entry&quot;</span><span class="p">)</span>
+        <span class="n">aeromancy_uri</span> <span class="o">=</span> <span class="n">hyperlink</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">manifest_value</span><span class="o">.</span><span class="n">ref</span><span class="p">)</span>
+        <span class="n">s3</span> <span class="o">=</span> <span class="n">VersionedS3Object</span><span class="o">.</span><span class="n">from_aeromancy_uri</span><span class="p">(</span><span class="n">aeromancy_uri</span><span class="p">)</span>
+        <span class="n">s3_objects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span>
+
+    <span class="n">artifact_type</span> <span class="o">=</span> <span class="n">wandb_api_artifact</span><span class="o">.</span><span class="n">type</span>
+    <span class="n">artifact_name</span> <span class="o">=</span> <span class="n">WandbArtifactName</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">wandb_api_artifact</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">AeromancyArtifact</span><span class="p">(</span>
+        <span class="n">s3</span><span class="o">=</span><span class="n">s3_objects</span><span class="p">,</span>
+        <span class="n">artifact_type</span><span class="o">=</span><span class="n">artifact_type</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">artifact_name</span><span class="o">.</span><span class="n">artifact_name</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.AeromancyArtifact.to_s3_viewer_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">to_s3_viewer_url</span><span class="p">()</span></code>
+
+<a href="#aeromancy.artifacts.AeromancyArtifact.to_s3_viewer_url" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return a URL to view the Artifact files on a web-based S3 viewer.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>    URL for viewing the Artifact.</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_s3_viewer_url</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hyperlink</span><span class="o">.</span><span class="n">URL</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a URL to view the Artifact files on a web-based S3 viewer.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        URL for viewing the Artifact.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">primary_s3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">s3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">query</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">primary_s3</span><span class="o">.</span><span class="n">key</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c1"># View the parent directory in DigitalOcean.</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">hyperlink</span><span class="o">.</span><span class="n">URL</span><span class="p">(</span>
+        <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+        <span class="n">host</span><span class="o">=</span><span class="s2">&quot;cloud.digitalocean.com&quot;</span><span class="p">,</span>
+        <span class="n">path</span><span class="o">=</span><span class="p">(</span>
+            <span class="s2">&quot;spaces&quot;</span><span class="p">,</span>
+            <span class="n">primary_s3</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="aeromancy.artifacts.Artifacts" class="doc doc-heading">
+          <code>Artifacts</code>
+
+
+<a href="#aeromancy.artifacts.Artifacts" class="headerlink" title="Permanent link">#</a></h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Bridge between Aeromancy and external artifact storage.</p>
+<p>This connects S3 objects to Weights and Bias artifacts and helps manages
+artifact dependencies.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span>
+<span class="normal">514</span>
+<span class="normal">515</span>
+<span class="normal">516</span>
+<span class="normal">517</span>
+<span class="normal">518</span>
+<span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span>
+<span class="normal">528</span>
+<span class="normal">529</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bridge between Aeromancy and external artifact storage.</span>
+
+<span class="sd">    This connects S3 objects to Weights and Bias artifacts and helps manages</span>
+<span class="sd">    artifact dependencies.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">wandb_run</span><span class="p">:</span> <span class="n">WandbRun</span><span class="p">,</span>
+        <span class="n">s3_client</span><span class="p">:</span> <span class="n">S3Client</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct an `Artifacts` object for a specific Weights and Biases `Run`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        wandb_run</span>
+<span class="sd">            Weights and Biases `Run` which will be associated with declared artifacts.</span>
+<span class="sd">        s3_client, optional</span>
+<span class="sd">            If missing, a default one will be set up from environment variables.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">s3_client</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_s3</span> <span class="o">=</span> <span class="n">s3_client</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_s3</span> <span class="o">=</span> <span class="n">S3Client</span><span class="o">.</span><span class="n">from_env_variables</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">wandb_run</span> <span class="o">=</span> <span class="n">wandb_run</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wandb_api</span> <span class="o">=</span> <span class="n">wandb</span><span class="o">.</span><span class="n">Api</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">declare_output</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">local_filenames</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Path</span><span class="p">],</span>
+        <span class="n">s3_destination</span><span class="p">:</span> <span class="n">S3Object</span><span class="p">,</span>
+        <span class="n">artifact_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">strip_prefix</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AeromancyArtifact</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Store a new artifact and log it as a produced artifact.</span>
+
+<span class="sd">        External artifacts are created from local files. Declaring them will</span>
+<span class="sd">        upload the files to S3 and register the artifact with Weights and</span>
+<span class="sd">        Biases.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name</span>
+<span class="sd">            Artifact name. Must meet Weights and Biases naming conventions,</span>
+<span class="sd">            beyond that semantics are up to the caller/project design.</span>
+<span class="sd">        local_filenames</span>
+<span class="sd">            Paths to local files.</span>
+<span class="sd">        s3_destination</span>
+<span class="sd">            Where local files should be uploaded on S3.</span>
+<span class="sd">        artifact_type</span>
+<span class="sd">            Short description of the artifact type. Semantics are up to the</span>
+<span class="sd">            caller/project design.</span>
+<span class="sd">        strip_prefix, optional</span>
+<span class="sd">            Prefix of local_filenames to remove before uploading them to S3. For</span>
+<span class="sd">            example, if `strip_prefix=Path(&#39;/a/b&#39;)`, a local filename with</span>
+<span class="sd">            `Path(&#39;/a/b/c/d.txt&#39;)` will be uploaded to</span>
+<span class="sd">            `&lt;s3_destination&gt;/c/d.txt`</span>
+<span class="sd">        metadata, optional</span>
+<span class="sd">            Any additional information to associate with the artifact. Semantics</span>
+<span class="sd">            are up to the caller/project design, though types must be storable</span>
+<span class="sd">            by Weights and Biases.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            `AeromancyArtifact` representing the output.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">local_filenames</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Need at least 1 item in local_filenames to be an output.&quot;</span><span class="p">)</span>
+
+        <span class="n">s3_objects</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">local_filename</span> <span class="ow">in</span> <span class="n">local_filenames</span><span class="p">:</span>
+            <span class="n">new_path</span> <span class="o">=</span> <span class="n">local_filename</span>
+            <span class="k">if</span> <span class="n">strip_prefix</span><span class="p">:</span>
+                <span class="c1"># Need a trailing slash since otherwise we end up with an absolute path.</span>
+                <span class="n">new_path</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">strip_prefix</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+            <span class="n">s3_objects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_s3</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">local_filename</span><span class="p">,</span> <span class="n">s3_destination</span> <span class="o">/</span> <span class="n">new_path</span><span class="p">))</span>
+        <span class="c1"># Upgrade it to an AeromancyArtifact.</span>
+        <span class="n">aero_artifact</span> <span class="o">=</span> <span class="n">AeromancyArtifact</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">artifact_type</span><span class="o">=</span><span class="n">artifact_type</span><span class="p">,</span>
+            <span class="n">s3</span><span class="o">=</span><span class="n">s3_objects</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">wandb_artifact</span> <span class="o">=</span> <span class="n">aero_artifact</span><span class="o">.</span><span class="n">as_wandb_artifact</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wandb_run</span><span class="o">.</span><span class="n">log_artifact</span><span class="p">(</span><span class="n">wandb_artifact</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">aero_artifact</span>
+
+    <span class="k">def</span> <span class="nf">_try_use_artifact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wandb_artifact</span><span class="p">,</span> <span class="n">use_as</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wandb_run</span><span class="o">.</span><span class="n">use_artifact</span><span class="p">(</span><span class="n">wandb_artifact</span><span class="p">,</span> <span class="n">use_as</span><span class="o">=</span><span class="n">use_as</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">wandb</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">CommError</span> <span class="k">as</span> <span class="n">comm_error</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Error using artifact: </span><span class="si">{</span><span class="n">wandb_artifact</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="p">)</span> <span class="kn">from</span> <span class="nn">comm_error</span>
+
+    <span class="k">def</span> <span class="nf">declare_input</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">artifact</span><span class="p">:</span> <span class="n">ArtifactDescriptor</span><span class="p">,</span>
+        <span class="n">use_as</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Path</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Record a dependency on an existing artifact and provide local access.</span>
+
+<span class="sd">        This indicates that our current Weights and Biases `Run` depends on the files in</span>
+<span class="sd">        the `artifact` and will resolve and fetch the files in the `artifact`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        artifact</span>
+<span class="sd">            An artifact that our associated Weights and Biases `Run` depends on.</span>
+<span class="sd">        use_as, optional</span>
+<span class="sd">            Description of how we&#39;re using the artifact (e.g., &quot;train&quot;, &quot;test&quot;).</span>
+<span class="sd">            Most useful when there are multiple input artifacts of the same</span>
+<span class="sd">            type.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            Returns a local filesystem version of the artifact.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">artifact</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_try_use_artifact</span><span class="p">(</span><span class="n">artifact</span><span class="p">,</span> <span class="n">use_as</span><span class="o">=</span><span class="n">use_as</span><span class="p">)</span>
+
+            <span class="n">api_artifact</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wandb_api</span><span class="o">.</span><span class="n">artifact</span><span class="p">(</span><span class="n">artifact</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">api_artifact</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">!=</span> <span class="n">api_artifact</span><span class="o">.</span><span class="n">source_qualified_name</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resolved </span><span class="si">{</span><span class="n">api_artifact</span><span class="o">.</span><span class="n">name</span><span class="si">!r}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">api_artifact</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">artifact</span> <span class="o">=</span> <span class="n">AeromancyArtifact</span><span class="o">.</span><span class="n">from_wandb_api_artifact</span><span class="p">(</span><span class="n">api_artifact</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">wandb_artifact</span> <span class="o">=</span> <span class="n">artifact</span><span class="o">.</span><span class="n">as_wandb_artifact</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_try_use_artifact</span><span class="p">(</span><span class="n">wandb_artifact</span><span class="p">,</span> <span class="n">use_as</span><span class="o">=</span><span class="n">use_as</span><span class="p">)</span>
+
+        <span class="n">local_paths</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_s3</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span> <span class="k">for</span> <span class="n">s3</span> <span class="ow">in</span> <span class="n">artifact</span><span class="o">.</span><span class="n">s3</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">local_paths</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.Artifacts.__init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">wandb_run</span><span class="p">,</span> <span class="n">s3_client</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#aeromancy.artifacts.Artifacts.__init__" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Construct an <code>Artifacts</code> object for a specific Weights and Biases <code>Run</code>.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>wandb_run</code></td>
+          <td>
+                <code><span title="wandb.sdk.wandb_run.Run">Run</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Weights and Biases <code>Run</code> which will be associated with declared artifacts.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>s3_client</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="aeromancy.s3.S3Client" href="../s3/#aeromancy.s3.S3Client">S3Client</a> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If missing, a default one will be set up from environment variables.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>optional</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="aeromancy.s3.S3Client" href="../s3/#aeromancy.s3.S3Client">S3Client</a> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If missing, a default one will be set up from environment variables.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">wandb_run</span><span class="p">:</span> <span class="n">WandbRun</span><span class="p">,</span>
+    <span class="n">s3_client</span><span class="p">:</span> <span class="n">S3Client</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Construct an `Artifacts` object for a specific Weights and Biases `Run`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    wandb_run</span>
+<span class="sd">        Weights and Biases `Run` which will be associated with declared artifacts.</span>
+<span class="sd">    s3_client, optional</span>
+<span class="sd">        If missing, a default one will be set up from environment variables.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">s3_client</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_s3</span> <span class="o">=</span> <span class="n">s3_client</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_s3</span> <span class="o">=</span> <span class="n">S3Client</span><span class="o">.</span><span class="n">from_env_variables</span><span class="p">()</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">wandb_run</span> <span class="o">=</span> <span class="n">wandb_run</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wandb_api</span> <span class="o">=</span> <span class="n">wandb</span><span class="o">.</span><span class="n">Api</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.Artifacts.declare_input" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">declare_input</span><span class="p">(</span><span class="n">artifact</span><span class="p">,</span> <span class="n">use_as</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#aeromancy.artifacts.Artifacts.declare_input" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Record a dependency on an existing artifact and provide local access.</p>
+<p>This indicates that our current Weights and Biases <code>Run</code> depends on the files in
+the <code>artifact</code> and will resolve and fetch the files in the <code>artifact</code>.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>artifact</code></td>
+          <td>
+                <code><span title="aeromancy.artifacts.ArtifactDescriptor">ArtifactDescriptor</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>An artifact that our associated Weights and Biases <code>Run</code> depends on.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_as</code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Description of how we're using the artifact (e.g., "train", "test").
+Most useful when there are multiple input artifacts of the same
+type.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>optional</code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Description of how we're using the artifact (e.g., "train", "test").
+Most useful when there are multiple input artifacts of the same
+type.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>    Returns a local filesystem version of the artifact.</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span>
+<span class="normal">514</span>
+<span class="normal">515</span>
+<span class="normal">516</span>
+<span class="normal">517</span>
+<span class="normal">518</span>
+<span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span>
+<span class="normal">528</span>
+<span class="normal">529</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">declare_input</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">artifact</span><span class="p">:</span> <span class="n">ArtifactDescriptor</span><span class="p">,</span>
+    <span class="n">use_as</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Path</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Record a dependency on an existing artifact and provide local access.</span>
+
+<span class="sd">    This indicates that our current Weights and Biases `Run` depends on the files in</span>
+<span class="sd">    the `artifact` and will resolve and fetch the files in the `artifact`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    artifact</span>
+<span class="sd">        An artifact that our associated Weights and Biases `Run` depends on.</span>
+<span class="sd">    use_as, optional</span>
+<span class="sd">        Description of how we&#39;re using the artifact (e.g., &quot;train&quot;, &quot;test&quot;).</span>
+<span class="sd">        Most useful when there are multiple input artifacts of the same</span>
+<span class="sd">        type.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        Returns a local filesystem version of the artifact.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">artifact</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_try_use_artifact</span><span class="p">(</span><span class="n">artifact</span><span class="p">,</span> <span class="n">use_as</span><span class="o">=</span><span class="n">use_as</span><span class="p">)</span>
+
+        <span class="n">api_artifact</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wandb_api</span><span class="o">.</span><span class="n">artifact</span><span class="p">(</span><span class="n">artifact</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">api_artifact</span><span class="o">.</span><span class="n">qualified_name</span> <span class="o">!=</span> <span class="n">api_artifact</span><span class="o">.</span><span class="n">source_qualified_name</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resolved </span><span class="si">{</span><span class="n">api_artifact</span><span class="o">.</span><span class="n">name</span><span class="si">!r}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">api_artifact</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">artifact</span> <span class="o">=</span> <span class="n">AeromancyArtifact</span><span class="o">.</span><span class="n">from_wandb_api_artifact</span><span class="p">(</span><span class="n">api_artifact</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">wandb_artifact</span> <span class="o">=</span> <span class="n">artifact</span><span class="o">.</span><span class="n">as_wandb_artifact</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_try_use_artifact</span><span class="p">(</span><span class="n">wandb_artifact</span><span class="p">,</span> <span class="n">use_as</span><span class="o">=</span><span class="n">use_as</span><span class="p">)</span>
+
+    <span class="n">local_paths</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_s3</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span> <span class="k">for</span> <span class="n">s3</span> <span class="ow">in</span> <span class="n">artifact</span><span class="o">.</span><span class="n">s3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">local_paths</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.Artifacts.declare_output" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">declare_output</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">local_filenames</span><span class="p">,</span> <span class="n">s3_destination</span><span class="p">,</span> <span class="n">artifact_type</span><span class="p">,</span> <span class="n">strip_prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#aeromancy.artifacts.Artifacts.declare_output" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Store a new artifact and log it as a produced artifact.</p>
+<p>External artifacts are created from local files. Declaring them will
+upload the files to S3 and register the artifact with Weights and
+Biases.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Artifact name. Must meet Weights and Biases naming conventions,
+beyond that semantics are up to the caller/project design.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>local_filenames</code></td>
+          <td>
+                <code><span title="collections.abc.Sequence">Sequence</span>[<span title="pathlib.Path">Path</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Paths to local files.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>s3_destination</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="aeromancy.s3.S3Object" href="../s3/#aeromancy.s3.S3Object">S3Object</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Where local files should be uploaded on S3.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>artifact_type</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Short description of the artifact type. Semantics are up to the
+caller/project design.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>strip_prefix</code></td>
+          <td>
+                <code><span title="pathlib.Path">Path</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Prefix of local_filenames to remove before uploading them to S3. For
+example, if <code>strip_prefix=Path('/a/b')</code>, a local filename with
+<code>Path('/a/b/c/d.txt')</code> will be uploaded to
+<code>&lt;s3_destination&gt;/c/d.txt</code></p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>optional</code></td>
+          <td>
+                <code><span title="pathlib.Path">Path</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Prefix of local_filenames to remove before uploading them to S3. For
+example, if <code>strip_prefix=Path('/a/b')</code>, a local filename with
+<code>Path('/a/b/c/d.txt')</code> will be uploaded to
+<code>&lt;s3_destination&gt;/c/d.txt</code></p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>metadata</code></td>
+          <td>
+                <code>dict | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Any additional information to associate with the artifact. Semantics
+are up to the caller/project design, though types must be storable
+by Weights and Biases.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>optional</code></td>
+          <td>
+                <code>dict | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Any additional information to associate with the artifact. Semantics
+are up to the caller/project design, though types must be storable
+by Weights and Biases.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>    `AeromancyArtifact` representing the output.</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">declare_output</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">local_filenames</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Path</span><span class="p">],</span>
+    <span class="n">s3_destination</span><span class="p">:</span> <span class="n">S3Object</span><span class="p">,</span>
+    <span class="n">artifact_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">strip_prefix</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AeromancyArtifact</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Store a new artifact and log it as a produced artifact.</span>
+
+<span class="sd">    External artifacts are created from local files. Declaring them will</span>
+<span class="sd">    upload the files to S3 and register the artifact with Weights and</span>
+<span class="sd">    Biases.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name</span>
+<span class="sd">        Artifact name. Must meet Weights and Biases naming conventions,</span>
+<span class="sd">        beyond that semantics are up to the caller/project design.</span>
+<span class="sd">    local_filenames</span>
+<span class="sd">        Paths to local files.</span>
+<span class="sd">    s3_destination</span>
+<span class="sd">        Where local files should be uploaded on S3.</span>
+<span class="sd">    artifact_type</span>
+<span class="sd">        Short description of the artifact type. Semantics are up to the</span>
+<span class="sd">        caller/project design.</span>
+<span class="sd">    strip_prefix, optional</span>
+<span class="sd">        Prefix of local_filenames to remove before uploading them to S3. For</span>
+<span class="sd">        example, if `strip_prefix=Path(&#39;/a/b&#39;)`, a local filename with</span>
+<span class="sd">        `Path(&#39;/a/b/c/d.txt&#39;)` will be uploaded to</span>
+<span class="sd">        `&lt;s3_destination&gt;/c/d.txt`</span>
+<span class="sd">    metadata, optional</span>
+<span class="sd">        Any additional information to associate with the artifact. Semantics</span>
+<span class="sd">        are up to the caller/project design, though types must be storable</span>
+<span class="sd">        by Weights and Biases.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        `AeromancyArtifact` representing the output.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">local_filenames</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Need at least 1 item in local_filenames to be an output.&quot;</span><span class="p">)</span>
+
+    <span class="n">s3_objects</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">local_filename</span> <span class="ow">in</span> <span class="n">local_filenames</span><span class="p">:</span>
+        <span class="n">new_path</span> <span class="o">=</span> <span class="n">local_filename</span>
+        <span class="k">if</span> <span class="n">strip_prefix</span><span class="p">:</span>
+            <span class="c1"># Need a trailing slash since otherwise we end up with an absolute path.</span>
+            <span class="n">new_path</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">strip_prefix</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+        <span class="n">s3_objects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_s3</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">local_filename</span><span class="p">,</span> <span class="n">s3_destination</span> <span class="o">/</span> <span class="n">new_path</span><span class="p">))</span>
+    <span class="c1"># Upgrade it to an AeromancyArtifact.</span>
+    <span class="n">aero_artifact</span> <span class="o">=</span> <span class="n">AeromancyArtifact</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">artifact_type</span><span class="o">=</span><span class="n">artifact_type</span><span class="p">,</span>
+        <span class="n">s3</span><span class="o">=</span><span class="n">s3_objects</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">wandb_artifact</span> <span class="o">=</span> <span class="n">aero_artifact</span><span class="o">.</span><span class="n">as_wandb_artifact</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wandb_run</span><span class="o">.</span><span class="n">log_artifact</span><span class="p">(</span><span class="n">wandb_artifact</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">aero_artifact</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="aeromancy.artifacts.WandbArtifactName" class="doc doc-heading">
+          <code>WandbArtifactName</code>
+
+
+<a href="#aeromancy.artifacts.WandbArtifactName" class="headerlink" title="Permanent link">#</a></h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="msgspec.Struct">Struct</span></code></p>
+
+  
+      <p>Represents a parse of a Weights and Biases artifact name.</p>
+<p>Can include None for any missing entries.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code><span title="aeromancy.artifacts.WandbArtifactName.entity">entity</span></code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Entity name (person or organization on Weights and Biases).</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="aeromancy.artifacts.WandbArtifactName.project">project</span></code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of Weights and Biases project.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="aeromancy.artifacts.WandbArtifactName.artifact_name">artifact_name</span></code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Should comply with Weights and Biases artifact naming scheme
+(see <code>validate_wandb_artifact_string</code>).</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="aeromancy.artifacts.WandbArtifactName.version">version</span></code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Weights and Biases version string (e.g., "latest", "v0").</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">WandbArtifactName</span><span class="p">(</span><span class="n">msgspec</span><span class="o">.</span><span class="n">Struct</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a parse of a Weights and Biases artifact name.</span>
+
+<span class="sd">    Can include None for any missing entries.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    entity</span>
+<span class="sd">        Entity name (person or organization on Weights and Biases).</span>
+<span class="sd">    project</span>
+<span class="sd">        Name of Weights and Biases project.</span>
+<span class="sd">    artifact_name</span>
+<span class="sd">        Should comply with Weights and Biases artifact naming scheme</span>
+<span class="sd">        (see `validate_wandb_artifact_string`).</span>
+<span class="sd">    version</span>
+<span class="sd">        Weights and Biases version string (e.g., &quot;latest&quot;, &quot;v0&quot;).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">entity</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">project</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">artifact_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Validate our inputs.&quot;&quot;&quot;</span>
+        <span class="c1"># We don&#39;t know for sure that Weights and Biases holds entity, project,</span>
+        <span class="c1"># and version strings subject to the same constraints as artifact name,</span>
+        <span class="c1"># but we&#39;ll enforce it here out of paranoia.</span>
+        <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="p">,</span> <span class="s2">&quot;entity&quot;</span><span class="p">)</span>
+        <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="p">,</span> <span class="s2">&quot;project&quot;</span><span class="p">)</span>
+        <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">artifact_name</span><span class="p">,</span> <span class="s2">&quot;artifact&quot;</span><span class="p">)</span>
+        <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Format as a Weights and Biases artifact string.&quot;&quot;&quot;</span>
+        <span class="n">pieces</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="p">:</span>
+            <span class="n">pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="p">:</span>
+            <span class="n">pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="p">)</span>
+        <span class="n">pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">artifact_name</span><span class="p">)</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pieces</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">base</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">wandb_artifact_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;WandbArtifactName&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse a string representing a Weights and Biases artifact.</span>
+
+<span class="sd">        Supports parsing the following formats:</span>
+
+<span class="sd">        - `name`</span>
+<span class="sd">        - `project/name`</span>
+<span class="sd">        - `org/project/name`</span>
+<span class="sd">        - `org/project/name:v0`</span>
+<span class="sd">        - `org/project/name:latest`</span>
+
+<span class="sd">        Any missing fields will be given the value None.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        wandb_artifact_name</span>
+<span class="sd">            String to parse.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            Instance of `WandbArtifactName` with values from `wandb_artifact_name`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">project</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">entity</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">version</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">pieces</span> <span class="o">=</span> <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+        <span class="c1"># If there&#39;s a version, pull it off the last piece.</span>
+        <span class="k">if</span> <span class="s2">&quot;:&quot;</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">last_part</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="n">pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_part</span>
+
+        <span class="k">match</span> <span class="nb">len</span><span class="p">(</span><span class="n">pieces</span><span class="p">):</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">artifact_name</span> <span class="o">=</span> <span class="n">pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">project</span><span class="p">,</span> <span class="n">artifact_name</span> <span class="o">=</span> <span class="n">pieces</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">entity</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">artifact_name</span> <span class="o">=</span> <span class="n">pieces</span>
+            <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Not sure how to parse: </span><span class="si">{</span><span class="n">wandb_artifact_name</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">artifact_name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">matches</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other_artifact_name</span><span class="p">:</span> <span class="s2">&quot;WandbArtifactName&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Test whether this and another artifact name are compatible.</span>
+
+<span class="sd">        Artifact names match when all set fields match, ignoring versions.</span>
+<span class="sd">        This is different than equality, since it allows for fields to be</span>
+<span class="sd">        unset on one or both of the artifact names.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other_artifact_name</span>
+<span class="sd">            The artifact name to match against.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            True if they match.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entity</span>
+            <span class="ow">and</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">entity</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="o">!=</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">entity</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">project</span>
+            <span class="ow">and</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">project</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">project</span> <span class="o">!=</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">project</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">artifact_name</span> <span class="o">!=</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">artifact_name</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">incorporate_overrides</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Incorporate artifact version overrides.</span>
+
+<span class="sd">        If these are set for this artifact via environment variables and we</span>
+<span class="sd">        don&#39;t already have a specific version set for this artifact, we&#39;ll use</span>
+<span class="sd">        the overridden version.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">artifact_name</span> <span class="ow">in</span> <span class="n">get_runtime_environment</span><span class="p">()</span><span class="o">.</span><span class="n">artifact_overrides</span><span class="p">:</span>
+            <span class="n">parsed_artifact_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">artifact_name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">matches</span><span class="p">(</span><span class="n">parsed_artifact_name</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">parsed_artifact_name</span><span class="o">.</span><span class="n">version</span>
+                <span class="k">break</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">resolve_artifact_name</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">artifact_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">default_project_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Resolve an artifact name, incorporating overrides.</span>
+
+<span class="sd">        This will always pick the latest version of an artifact unless it has</span>
+<span class="sd">        been specifically overridden by `--artifact-override`.</span>
+
+<span class="sd">        Note that this method works without net access and thus won&#39;t actually</span>
+<span class="sd">        resolve the &quot;latest&quot; tag to a specific version.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        artifact_name</span>
+<span class="sd">            Artifact name to resolve. Version will default to &quot;latest&quot;, entity</span>
+<span class="sd">            to Weights and Biases default, and project name to the `Tracker`&#39;s</span>
+<span class="sd">            project name.</span>
+<span class="sd">        default_project_name</span>
+<span class="sd">            Project name will be filled in from the `artifact_name` if it</span>
+<span class="sd">            includes one (e.g., &quot;project/artifact:v3&quot;). If not, we will use this</span>
+<span class="sd">            value. Note that if this value is None, we can still incorporate</span>
+<span class="sd">            overrides (but project name won&#39;t be used to determine whether</span>
+<span class="sd">            entities match, so it could be less precise).</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">            Resolved artifact name as a string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">wandb_artifact_name</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">artifact_name</span><span class="p">)</span>
+        <span class="c1"># Fill in some defaults.</span>
+        <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">project</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">project</span> <span class="ow">or</span> <span class="n">default_project_name</span>
+        <span class="p">)</span>
+        <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">version</span> <span class="ow">or</span> <span class="s2">&quot;latest&quot;</span>
+        <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">incorporate_overrides</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">wandb_artifact_name</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.WandbArtifactName.__post_init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__post_init__</span><span class="p">()</span></code>
+
+<a href="#aeromancy.artifacts.WandbArtifactName.__post_init__" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Validate our inputs.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span>
+<span class="normal">98</span>
+<span class="normal">99</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Validate our inputs.&quot;&quot;&quot;</span>
+    <span class="c1"># We don&#39;t know for sure that Weights and Biases holds entity, project,</span>
+    <span class="c1"># and version strings subject to the same constraints as artifact name,</span>
+    <span class="c1"># but we&#39;ll enforce it here out of paranoia.</span>
+    <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="p">,</span> <span class="s2">&quot;entity&quot;</span><span class="p">)</span>
+    <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="p">,</span> <span class="s2">&quot;project&quot;</span><span class="p">)</span>
+    <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">artifact_name</span><span class="p">,</span> <span class="s2">&quot;artifact&quot;</span><span class="p">)</span>
+    <span class="n">_validate_wandb_artifact_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.WandbArtifactName.__str__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+
+<a href="#aeromancy.artifacts.WandbArtifactName.__str__" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Format as a Weights and Biases artifact string.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Format as a Weights and Biases artifact string.&quot;&quot;&quot;</span>
+    <span class="n">pieces</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="p">:</span>
+        <span class="n">pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="p">:</span>
+        <span class="n">pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="p">)</span>
+    <span class="n">pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">artifact_name</span><span class="p">)</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pieces</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">base</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.WandbArtifactName.incorporate_overrides" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">incorporate_overrides</span><span class="p">()</span></code>
+
+<a href="#aeromancy.artifacts.WandbArtifactName.incorporate_overrides" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Incorporate artifact version overrides.</p>
+<p>If these are set for this artifact via environment variables and we
+don't already have a specific version set for this artifact, we'll use
+the overridden version.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">incorporate_overrides</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Incorporate artifact version overrides.</span>
+
+<span class="sd">    If these are set for this artifact via environment variables and we</span>
+<span class="sd">    don&#39;t already have a specific version set for this artifact, we&#39;ll use</span>
+<span class="sd">    the overridden version.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">artifact_name</span> <span class="ow">in</span> <span class="n">get_runtime_environment</span><span class="p">()</span><span class="o">.</span><span class="n">artifact_overrides</span><span class="p">:</span>
+        <span class="n">parsed_artifact_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">artifact_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">matches</span><span class="p">(</span><span class="n">parsed_artifact_name</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">parsed_artifact_name</span><span class="o">.</span><span class="n">version</span>
+            <span class="k">break</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.WandbArtifactName.matches" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">matches</span><span class="p">(</span><span class="n">other_artifact_name</span><span class="p">)</span></code>
+
+<a href="#aeromancy.artifacts.WandbArtifactName.matches" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Test whether this and another artifact name are compatible.</p>
+<p>Artifact names match when all set fields match, ignoring versions.
+This is different than equality, since it allows for fields to be
+unset on one or both of the artifact names.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>other_artifact_name</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="aeromancy.artifacts.WandbArtifactName" href="#aeromancy.artifacts.WandbArtifactName">WandbArtifactName</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The artifact name to match against.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>    True if they match.</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">matches</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other_artifact_name</span><span class="p">:</span> <span class="s2">&quot;WandbArtifactName&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test whether this and another artifact name are compatible.</span>
+
+<span class="sd">    Artifact names match when all set fields match, ignoring versions.</span>
+<span class="sd">    This is different than equality, since it allows for fields to be</span>
+<span class="sd">    unset on one or both of the artifact names.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    other_artifact_name</span>
+<span class="sd">        The artifact name to match against.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        True if they match.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entity</span>
+        <span class="ow">and</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">entity</span>
+        <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="o">!=</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">entity</span>
+    <span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">project</span>
+        <span class="ow">and</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">project</span>
+        <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">project</span> <span class="o">!=</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">project</span>
+    <span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">artifact_name</span> <span class="o">!=</span> <span class="n">other_artifact_name</span><span class="o">.</span><span class="n">artifact_name</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.WandbArtifactName.parse" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">wandb_artifact_name</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#aeromancy.artifacts.WandbArtifactName.parse" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Parse a string representing a Weights and Biases artifact.</p>
+<p>Supports parsing the following formats:</p>
+<ul>
+<li><code>name</code></li>
+<li><code>project/name</code></li>
+<li><code>org/project/name</code></li>
+<li><code>org/project/name:v0</code></li>
+<li><code>org/project/name:latest</code></li>
+</ul>
+<p>Any missing fields will be given the value None.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>wandb_artifact_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>String to parse.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>    Instance of `WandbArtifactName` with values from `wandb_artifact_name`</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">parse</span><span class="p">(</span>
+    <span class="bp">cls</span><span class="p">,</span>
+    <span class="n">wandb_artifact_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;WandbArtifactName&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse a string representing a Weights and Biases artifact.</span>
+
+<span class="sd">    Supports parsing the following formats:</span>
+
+<span class="sd">    - `name`</span>
+<span class="sd">    - `project/name`</span>
+<span class="sd">    - `org/project/name`</span>
+<span class="sd">    - `org/project/name:v0`</span>
+<span class="sd">    - `org/project/name:latest`</span>
+
+<span class="sd">    Any missing fields will be given the value None.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    wandb_artifact_name</span>
+<span class="sd">        String to parse.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        Instance of `WandbArtifactName` with values from `wandb_artifact_name`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">project</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">entity</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">pieces</span> <span class="o">=</span> <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+    <span class="c1"># If there&#39;s a version, pull it off the last piece.</span>
+    <span class="k">if</span> <span class="s2">&quot;:&quot;</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">last_part</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="n">pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_part</span>
+
+    <span class="k">match</span> <span class="nb">len</span><span class="p">(</span><span class="n">pieces</span><span class="p">):</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">artifact_name</span> <span class="o">=</span> <span class="n">pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">project</span><span class="p">,</span> <span class="n">artifact_name</span> <span class="o">=</span> <span class="n">pieces</span>
+        <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">entity</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">artifact_name</span> <span class="o">=</span> <span class="n">pieces</span>
+        <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Not sure how to parse: </span><span class="si">{</span><span class="n">wandb_artifact_name</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">artifact_name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="aeromancy.artifacts.WandbArtifactName.resolve_artifact_name" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">resolve_artifact_name</span><span class="p">(</span><span class="n">artifact_name</span><span class="p">,</span> <span class="n">default_project_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#aeromancy.artifacts.WandbArtifactName.resolve_artifact_name" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Resolve an artifact name, incorporating overrides.</p>
+<p>This will always pick the latest version of an artifact unless it has
+been specifically overridden by <code>--artifact-override</code>.</p>
+<p>Note that this method works without net access and thus won't actually
+resolve the "latest" tag to a specific version.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>artifact_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Artifact name to resolve. Version will default to "latest", entity
+to Weights and Biases default, and project name to the <code>Tracker</code>'s
+project name.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>default_project_name</code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Project name will be filled in from the <code>artifact_name</code> if it
+includes one (e.g., "project/artifact:v3"). If not, we will use this
+value. Note that if this value is None, we can still incorporate
+overrides (but project name won't be used to determine whether
+entities match, so it could be less precise).</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>    Resolved artifact name as a string.</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>aeromancy/artifacts.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">resolve_artifact_name</span><span class="p">(</span>
+    <span class="bp">cls</span><span class="p">,</span>
+    <span class="n">artifact_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">default_project_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Resolve an artifact name, incorporating overrides.</span>
+
+<span class="sd">    This will always pick the latest version of an artifact unless it has</span>
+<span class="sd">    been specifically overridden by `--artifact-override`.</span>
+
+<span class="sd">    Note that this method works without net access and thus won&#39;t actually</span>
+<span class="sd">    resolve the &quot;latest&quot; tag to a specific version.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    artifact_name</span>
+<span class="sd">        Artifact name to resolve. Version will default to &quot;latest&quot;, entity</span>
+<span class="sd">        to Weights and Biases default, and project name to the `Tracker`&#39;s</span>
+<span class="sd">        project name.</span>
+<span class="sd">    default_project_name</span>
+<span class="sd">        Project name will be filled in from the `artifact_name` if it</span>
+<span class="sd">        includes one (e.g., &quot;project/artifact:v3&quot;). If not, we will use this</span>
+<span class="sd">        value. Note that if this value is None, we can still incorporate</span>
+<span class="sd">        overrides (but project name won&#39;t be used to determine whether</span>
+<span class="sd">        entities match, so it could be less precise).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        Resolved artifact name as a string.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">wandb_artifact_name</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">artifact_name</span><span class="p">)</span>
+    <span class="c1"># Fill in some defaults.</span>
+    <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">project</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">project</span> <span class="ow">or</span> <span class="n">default_project_name</span>
+    <span class="p">)</span>
+    <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">version</span> <span class="ow">or</span> <span class="s2">&quot;latest&quot;</span>
+    <span class="n">wandb_artifact_name</span><span class="o">.</span><span class="n">incorporate_overrides</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">wandb_artifact_name</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+    
+  </body>
+</html>
