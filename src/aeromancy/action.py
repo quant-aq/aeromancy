@@ -53,12 +53,12 @@ class Action:
     def run(self, tracker: Tracker) -> None:
         """Execute this action.
 
+        This logic is Action-specific and must be overridden by subclasses.
+
         Parameters
         ----------
         tracker
             An Aeromancy `Tracker` for this task.
-
-        This logic is Action-specific and must be overridden by subclasses.
         """
         raise NotImplementedError
 
