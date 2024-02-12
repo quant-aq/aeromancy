@@ -20,8 +20,8 @@ jobs:
           python-version: 3.10.5
       - name: Build pages
         run: |
-          pip install mkdocs mkdocs-material mkdocs-gen-files
-          cd docs && mkdocs build
+          pdm install --group doc
+          cd docs && pdm run mkdocs build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
