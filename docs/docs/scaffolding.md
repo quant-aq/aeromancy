@@ -95,11 +95,12 @@ components:
 - An "AeroMain" script to parse any project-specific options and bring it all
   together
 
-**TODO**: We will eventually have a script to create/layout a new Aeromancy
-project from a template, with stub versions of each of these items.
-
-The template will also include a default Python project setup (`pyproject.toml`)
-configured to use [pdm](https://pdm.fming.dev/) that you may also want to adjust:
+To quickly set up an Aeromancy project, we've created a
+[Copier](https://copier.readthedocs.io/en/stable/) template. See instructions at
+the
+[quant-aq/aeromancy-project-template](https://github.com/quant-aq/aeromancy-project-template?tab=readme-ov-file#quick-start).
+In the generated Python project setup (`pyproject.toml`), you may also want to
+adjust:
 
 - **Extra Python packages:** Add them with `pdm add <pkgname>`. See [PDM
   docs](https://pdm.fming.dev/latest/usage/dependency/) for more information on

@@ -1,5 +1,6 @@
 # Aeromancy
 
+[![Docs](https://img.shields.io/badge/Docs-yellow?style=flat&link=https%3A%2F%2Fquant-aq.github.io%2Faeromancy%2F)](https://quant-aq.github.io/aeromancy/)
 [![Tests](https://github.com/quant-aq/aeromancy/actions/workflows/ci.yml/badge.svg)](https://github.com/quant-aq/aeromancy/actions/workflows/ci.yml)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
@@ -7,31 +8,35 @@
 [![pre-commit enabled](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
 ![Apache 2.0 licensed](https://img.shields.io/github/license/quant-aq/aeromancy)
 
-**Aeromancy** is an opinionated philosophy and open-sourced framework that closely
-tracks experimental runtime environments for more reproducible machine learning.
-In existing experiment trackers, it’s easy to miss important details about how
-an experiment was run, e.g., which version of a dataset was used as input or the
-exact versions of library dependencies. Missing these details can make
-replicability more difficult. Aeromancy aims to make this process smoother by
-providing both new infrastructure (a more comprehensive versioning scheme
+**Aeromancy** is an opinionated philosophy and open-sourced framework that
+closely tracks experimental runtime environments for more reproducible machine
+learning. In existing experiment trackers, it’s easy to miss important details
+about how an experiment was run, e.g., which version of a dataset was used as
+input or the exact versions of library dependencies. Missing these details can
+make replicability more difficult. Aeromancy aims to make this process smoother
+by providing both new infrastructure (a more comprehensive versioning scheme
 including both system runtimes and external datasets) and a corresponding set of
 best practices to ensure experiments are maximally trackable.
 
 In its current form, Aeromancy requires a fairly specific software stack:
 
 - **Experiment tracker**: [Weights and Biases](https://wandb.ai)
-- **Object storage** (artifacts): S3-compatible, e.g., [Ceph](https://github.com/ceph/ceph)
+- **Object storage** (artifacts): S3-compatible, e.g.,
+  [Ceph](https://github.com/ceph/ceph)
 - **Virtualization**: [Docker](https://www.docker.com/)
-
-**Coming soon**: A proper Getting Started section and a
-[Copier](https://copier.readthedocs.io/en/stable/) template for quickly setting
-up a new Aeromancy-managed project.
 
 **Note:** As is likely obvious, Aeromancy documentation is in a very early
 state. As this is a pre-release support may be limited. For now, we include a
-couple pointers for how to setup your environment for Aeromancy. Once you have
-[`pdm`](https://pdm.fming.dev) installed, run `pdm doc` to launch a doc server
-which will provide additional information.
+couple pointers for how to setup your environment for Aeromancy.
+
+## Getting started
+
+**Coming soon**: A proper Getting Started section.
+
+To quickly set up an Aeromancy project, we've created a
+[Copier](https://copier.readthedocs.io/en/stable/) template. See instructions at
+the
+[quant-aq/aeromancy-project-template](https://github.com/quant-aq/aeromancy-project-template?tab=readme-ov-file#quick-start).
 
 ## Requirements
 
@@ -52,11 +57,15 @@ which will provide additional information.
 ### Mac OS
 
 - Use [Homebrew](https://brew.sh/) to install the following:
-  - `brew install apache-arrow@13.0.0_5 bat@0.23.0 graphviz@8.1.0 openblas@0.3.24 pre-commit@3.3.3`
-- Install Docker Desktop from [docker.com](https://www.docker.com/) (not Brew since it has a trickier upgrade story)
+  - `brew install apache-arrow@13.0.0_5 bat@0.23.0 graphviz@8.1.0
+    openblas@0.3.24 pre-commit@3.3.3`
+- Install Docker Desktop from [docker.com](https://www.docker.com/) (not Brew
+  since it has a trickier upgrade story)
 
 ## Common commands
 
 - `pdm lint`: Run pre-commit linters
 - `pdm test`: Run test suite
-- `pdm doc`: Start doc server
+- `pdm doc`: Start doc server (see also the [public
+  version](https://quant-aq.github.io/aeromancy/) for the latest checked in
+  version)
