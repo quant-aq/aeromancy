@@ -312,6 +312,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       Requirements
@@ -862,6 +871,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       Requirements
@@ -913,35 +931,38 @@
 
 
 <h1 id="aeromancy">Aeromancy<a class="headerlink" href="#aeromancy" title="Permanent link">#</a></h1>
-<p><a href="https://github.com/quant-aq/aeromancy/actions/workflows/ci.yml"><img alt="Tests" src="https://github.com/quant-aq/aeromancy/actions/workflows/ci.yml/badge.svg" /></a>
+<p><a href="https://quant-aq.github.io/aeromancy/"><img alt="Docs" src="https://img.shields.io/badge/Docs-yellow?style=flat&amp;link=https%3A%2F%2Fquant-aq.github.io%2Faeromancy%2F" /></a>
+<a href="https://github.com/quant-aq/aeromancy/actions/workflows/ci.yml"><img alt="Tests" src="https://github.com/quant-aq/aeromancy/actions/workflows/ci.yml/badge.svg" /></a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
 <a href="https://pdm.fming.dev"><img alt="pdm-managed" src="https://img.shields.io/badge/pdm-managed-blueviolet" /></a>
 <a href="https://github.com/astral-sh/ruff"><img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" /></a>
 <a href="https://pre-commit.com/"><img alt="pre-commit enabled" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&amp;logoColor=white" /></a>
 <img alt="Apache 2.0 licensed" src="https://img.shields.io/github/license/quant-aq/aeromancy" /></p>
-<p><strong>Aeromancy</strong> is an opinionated philosophy and open-sourced framework that closely
-tracks experimental runtime environments for more reproducible machine learning.
-In existing experiment trackers, it’s easy to miss important details about how
-an experiment was run, e.g., which version of a dataset was used as input or the
-exact versions of library dependencies. Missing these details can make
-replicability more difficult. Aeromancy aims to make this process smoother by
-providing both new infrastructure (a more comprehensive versioning scheme
+<p><strong>Aeromancy</strong> is an opinionated philosophy and open-sourced framework that
+closely tracks experimental runtime environments for more reproducible machine
+learning. In existing experiment trackers, it’s easy to miss important details
+about how an experiment was run, e.g., which version of a dataset was used as
+input or the exact versions of library dependencies. Missing these details can
+make replicability more difficult. Aeromancy aims to make this process smoother
+by providing both new infrastructure (a more comprehensive versioning scheme
 including both system runtimes and external datasets) and a corresponding set of
 best practices to ensure experiments are maximally trackable.</p>
 <p>In its current form, Aeromancy requires a fairly specific software stack:</p>
 <ul>
 <li><strong>Experiment tracker</strong>: <a href="https://wandb.ai">Weights and Biases</a></li>
-<li><strong>Object storage</strong> (artifacts): S3-compatible, e.g., <a href="https://github.com/ceph/ceph">Ceph</a></li>
+<li><strong>Object storage</strong> (artifacts): S3-compatible, e.g.,
+  <a href="https://github.com/ceph/ceph">Ceph</a></li>
 <li><strong>Virtualization</strong>: <a href="https://www.docker.com/">Docker</a></li>
 </ul>
-<p><strong>Coming soon</strong>: A proper Getting Started section and a
-<a href="https://copier.readthedocs.io/en/stable/">Copier</a> template for quickly setting
-up a new Aeromancy-managed project.</p>
 <p><strong>Note:</strong> As is likely obvious, Aeromancy documentation is in a very early
 state. As this is a pre-release support may be limited. For now, we include a
-couple pointers for how to setup your environment for Aeromancy. Once you have
-<a href="https://pdm.fming.dev"><code>pdm</code></a> installed, run <code>pdm doc</code> to launch a doc server
-which will provide additional information.</p>
+couple pointers for how to setup your environment for Aeromancy.</p>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h2>
+<p><strong>Coming soon</strong>: A proper Getting Started section.</p>
+<p>To quickly set up an Aeromancy project, we've created a
+<a href="https://copier.readthedocs.io/en/stable/">Copier</a> template. See instructions at
+the
+<a href="https://github.com/quant-aq/aeromancy-project-template?tab=readme-ov-file#quick-start">quant-aq/aeromancy-project-template</a>.</p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
 <ul>
 <li>Python 3.10.5 or higher</li>
@@ -963,14 +984,18 @@ which will provide additional information.</p>
 <h3 id="mac-os">Mac OS<a class="headerlink" href="#mac-os" title="Permanent link">#</a></h3>
 <ul>
 <li>Use <a href="https://brew.sh/">Homebrew</a> to install the following:</li>
-<li><code>brew install apache-arrow@13.0.0_5 bat@0.23.0 graphviz@8.1.0 openblas@0.3.24 pre-commit@3.3.3</code></li>
-<li>Install Docker Desktop from <a href="https://www.docker.com/">docker.com</a> (not Brew since it has a trickier upgrade story)</li>
+<li><code>brew install apache-arrow@13.0.0_5 bat@0.23.0 graphviz@8.1.0
+    openblas@0.3.24 pre-commit@3.3.3</code></li>
+<li>Install Docker Desktop from <a href="https://www.docker.com/">docker.com</a> (not Brew
+  since it has a trickier upgrade story)</li>
 </ul>
 <h2 id="common-commands">Common commands<a class="headerlink" href="#common-commands" title="Permanent link">#</a></h2>
 <ul>
 <li><code>pdm lint</code>: Run pre-commit linters</li>
 <li><code>pdm test</code>: Run test suite</li>
-<li><code>pdm doc</code>: Start doc server</li>
+<li><code>pdm doc</code>: Start doc server (see also the <a href="https://quant-aq.github.io/aeromancy/">public
+  version</a> for the latest checked in
+  version)</li>
 </ul>
 
 
