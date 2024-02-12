@@ -364,11 +364,6 @@ class AeromancyArtifact(msgspec.Struct):
     def to_s3_viewer_url(self) -> hyperlink.URL:
         """Return a URL to view the Artifact files on a web-based S3 viewer.
 
-        Parameters
-        ----------
-        s3
-            S3 object to view.
-
         Returns
         -------
             URL for viewing the Artifact.

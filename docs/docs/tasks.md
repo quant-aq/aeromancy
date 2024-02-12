@@ -21,10 +21,11 @@ graph LR
 ## [`Tracker`][aeromancy.tracker.Tracker]
 
 Creates an environment for to track code for reproducible ML/data science/data
-pipelines/etc. For example, [`WandbTracker`][aeromancy.tracker.WandbTracker] (a
-subclass) integrates with Weights and Biases (W&B) for ML experiment tracking
-and S3 for external artifact storage. This class doesn't know anything
-task-specific, dependencies between tasks, or how to actually execute the code.
+pipelines/etc. For example,
+[`WandbTracker`][aeromancy.wandb_tracker.WandbTracker] (a subclass) integrates
+with Weights and Biases (W&B) for ML experiment tracking and S3 for external
+artifact storage. This class doesn't know anything task-specific, dependencies
+between tasks, or how to actually execute the code.
 
 ## [`Action`][aeromancy.action.Action]
 

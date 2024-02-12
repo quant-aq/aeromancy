@@ -105,8 +105,6 @@ class AeromancyStruct(msgspec.Struct):
 
         Parameters
         ----------
-        obj
-            The `msgspec.Struct` object to save.
         filename
             Where to save the object locally.
         artifact_name

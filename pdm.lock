@@ -5,7 +5,7 @@
 groups = ["default", "dev", "doc"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:fd294bade938004eaf29331c4580abf92968e15a64454f49d3582f1c1ffbe68b"
+content_hash = "sha256:b58a22e1d53ab75301e17309417f5cacd6754f7e9c60df0a93f9a5abd4ddb647"
 
 [[package]]
 name = "appdirs"
