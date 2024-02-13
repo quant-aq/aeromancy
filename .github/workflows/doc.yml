@@ -30,6 +30,10 @@ jobs:
     environment:
       name: github-pages
 
+    permissions:
+        pages: write
+        id-token: write
+
     steps:
       - uses: actions/checkout@v4
       - uses: pdm-project/setup-pdm@v4
