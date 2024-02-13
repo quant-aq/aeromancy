@@ -36,6 +36,8 @@ jobs:
         run: |
           pdm install --group doc
           cd docs && pdm run mkdocs build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
