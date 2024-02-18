@@ -6,7 +6,7 @@ doing the cross-references. -->
 In order to enable tracking, Aeromancy is rather opinionated about how projects
 are set up. A "project" in this case means a pipeline of tasks, potentially
 configurable through CLI flags. This document provides an overview of the
-components involved and how to set up a new Aeromancy project.
+components involved.
 
 This diagram roughly shows the flow:
 
@@ -81,59 +81,3 @@ generated [`Action`][aeromancy.action.Action]s.
 
 See [Tasks, Trackers, and Actions](tasks.md) for more information on these
 objects.
-
-## Creating a new Aeromancy project
-
-In order to set up a new project, you'll need a Git repository with these
-components:
-
-- Actions (subclasses of [`Action`][aeromancy.action.Action] with specific logic
-  for your tasks)
-- An [`ActionBuilder`][aeromancy.action_builder.ActionBuilder] to instantiate
-  the [`Action`][aeromancy.action.Action] objects and describe their
-  dependencies
-- An "AeroMain" script to parse any project-specific options and bring it all
-  together
-
-To quickly set up an Aeromancy project, we've created a
-[Copier](https://copier.readthedocs.io/en/stable/) template. See instructions at
-the
-[quant-aq/aeromancy-project-template](https://github.com/quant-aq/aeromancy-project-template?tab=readme-ov-file#quick-start).
-In the generated Python project setup (`pyproject.toml`), you may also want to
-adjust:
-
-- **Extra Python packages:** Add them with `pdm add <pkgname>`. See [PDM
-  docs](https://pdm.fming.dev/latest/usage/dependency/) for more information on
-  this.
-- **`pdm` [scripts](https://pdm.fming.dev/latest/usage/scripts/)**: Some of
-  these are necessary for running Aeromancy (like `pdm go`), but you can add
-  more if there are common tasks for your project.
-- **Extra `docker run` arguments**: E.g., mounting
-  [volumes](https://docs.docker.com/engine/reference/commandline/run/#mount)).
-  These can be baked `pdm go` script with `--extra-docker-run-args='...'`.
-- **Extra Debian packages:** (outside of those included by Aeromancy), you may
-  want to bake them into the `pdm go` script with `--extra-debian-package='...'`
-  (specify the flag once per package name).
-- **Development environment (linters, etc.):** Aeromancy encourages the use of
-  the `ruff` linter and `Black` formatter, but these are customizable.
-
-### Filesystem layout
-
-Ultimately, the structure of an Aeromancy project should look something like
-this:
-
-```text
-<projectroot>/
-  pyproject.toml
-  pdm.lock
-  main.py  # AeroMain
-  src/
-    <projectname>/
-      <youractions>.py
-      <youractionbuilder>.py
-```
-
-The structure of the classes containing your
-[`Action`][aeromancy.action.Action](s) and
-[`ActionBuilder`][aeromancy.action_builder.ActionBuilder] is flexible -- they
-just need to be importable in AeroMain.

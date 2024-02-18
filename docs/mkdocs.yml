@@ -7,8 +7,12 @@ site_dir: "site"
 
 nav:
   - Home:
-    - Overview: index.md
-    - Scaffolding and new projects: scaffolding.md
+    - Introduction: index.md
+    - Quick Start: quick_start.md
+    - Seting up Aeromancy: setup.md
+    - Customizing your project: customizing.md
+  - Developer Reference:
+    - Scaffolding: scaffolding.md
     - Tasks, Trackers, and Actions: tasks.md
   - Code Reference: reference/
 
@@ -28,7 +32,6 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path:
       - docs
-      - ../README.md
       check_paths: true
   - pymdownx.superfences:
       custom_fences:
@@ -59,4 +62,3 @@ plugins:
 
 watch:
   - "../src"
-  - "../README.md"
