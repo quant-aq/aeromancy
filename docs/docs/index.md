@@ -27,8 +27,9 @@ we said it was opinionated)
 - **Python Package Manager**: [pdm](https://pdm.fming.dev)
 - **Revision Control**: [Git](https://git-scm.com/)
 
-**Note:** As is likely obvious, Aeromancy documentation is in a very early
-state. As this is a pre-release support may be limited.
+!!! note
+    Aeromancy documentation is still in a very early state. As this is a
+    pre-release, support may be limited.
 
 ## Documentation overview
 
