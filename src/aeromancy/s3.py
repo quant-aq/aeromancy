@@ -361,7 +361,7 @@ class S3Client:
             _S3_CLIENT = cls(
                 aws_access_key_id=os.environ["AEROMANCY_AWS_ACCESS_KEY_ID"],
                 aws_secret_access_key=os.environ["AEROMANCY_AWS_SECRET_ACCESS_KEY"],
-                region_name=os.environ["AEROMANCY_AWS_REGION"],
+                region_name=os.environ.get("AEROMANCY_AWS_REGION", ""),
                 endpoint_url=os.environ["AEROMANCY_AWS_S3_ENDPOINT_URL"],
             )
         return _S3_CLIENT
