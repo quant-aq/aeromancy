@@ -1,8 +1,5 @@
 name: Build and Release to PyPI
 on:
-  create:
-    tags:
-      - '*'
   workflow_dispatch:
 
 jobs:
