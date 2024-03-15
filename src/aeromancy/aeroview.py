@@ -8,6 +8,7 @@ or:
 
     shell> pdm aeroview <Weights and Biases artifact name>
 """
+
 import subprocess
 from pathlib import Path
 
@@ -45,7 +46,7 @@ def view_aeromancy_uri(
     local_path = s3_client.fetch(s3)
     real_filename = Path(*aeromancy_uri.path)
     match real_filename.suffix:
-        case ".yaml":
+        case ".json" | ".yaml":
             subprocess.check_call(
                 [  # noqa: S607
                     "bat",
