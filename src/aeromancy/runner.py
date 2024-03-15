@@ -110,7 +110,7 @@ def build_docker(
         (
             "--tag",
             docker_tag,
-            "ssh://git@github.com/quant-aq/aeromancy.git#v0.1.0:docker",
+            "https://github.com/quant-aq/aeromancy.git#v0.1.0:docker",
         ),
     )
     docker_command = " ".join(docker_commmand_pieces)
