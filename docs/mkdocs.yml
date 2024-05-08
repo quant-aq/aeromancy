@@ -14,6 +14,7 @@ nav:
   - Developer Reference:
     - Scaffolding: scaffolding.md
     - Tasks, Trackers, and Actions: tasks.md
+    - Contributing guidelines: contributing.md
   - Code Reference: reference/
 
 theme:
@@ -33,6 +34,10 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.snippets:
       base_path:
+      - "../CONTRIBUTING.md"
+      # Note: Must be last due to case-insensitive file systems (e.g.,
+      # "docs/contributing.md" and "../CONTRIBUTING.md" look the same and we'll
+      # use the wrong version)
       - docs
       check_paths: true
   - pymdownx.superfences:
@@ -44,7 +49,6 @@ markdown_extensions:
   - pymdownx.tasklist
   - toc:
       permalink: "#"
-
 
 plugins:
 - search
@@ -64,3 +68,4 @@ plugins:
 
 watch:
   - "../src"
+  - "../CONTRIBUTING.md"
