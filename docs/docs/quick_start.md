@@ -1,6 +1,8 @@
 # Quick start
 
-This guide will walk you through some of the basic Aeromancy workflows.
+This guide will walk you through some of the basic Aeromancy workflows. For a
+high level overview of what problems Aeromancy is trying to solve, check out our
+[SciPy 2024](scipy_abstract.md) abstract.
 
 ## Creating a project
 
