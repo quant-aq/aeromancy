@@ -3,6 +3,10 @@
 Aeromancy has been accepted at [SciPy 2024](https://www.scipy2024.scipy.org/),
 July 8-14, 2024.
 
+## Poster
+
+[![Aeromancy SciPy 2024 poster](Aeromancy_SciPy_2024_poster_thumb.png)](Aeromancy_SciPy_2024_poster.pdf)
+
 ## Abstract
 
 We present Aeromancy, an opinionated philosophy and open-sourced framework that
