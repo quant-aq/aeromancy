@@ -23,6 +23,11 @@ adjust:
 - **Extra Debian packages:** (outside of those included by Aeromancy), you may
   want to bake them into the `pdm go` script with `--extra-debian-package='...'`
   (specify the flag once per package name).
+- **Extra environment variables:** If your code needs information in environment
+  variables (e.g., API keys and other credentials), you can pass tell Aeromancy
+  to pass these through to container with `--extra-env-var` (specify the flag
+  once per variable). Use these sparingly, as they could make steps using these
+  variables harder to reproduce and are **not** tracked by Aeromancy.
 
 ## Filesystem layout
 
