@@ -34,8 +34,6 @@ class WandbTracker(Tracker):
         tags: set[str] | None = None,
         quiet: bool = True,
     ):
-        if get_runtime_environment().debug_mode:
-            print(f"DEBUG: top of WandbTracker {tags=}")
         Tracker.__init__(
             self,
             project_name=project_name,
@@ -52,12 +50,8 @@ class WandbTracker(Tracker):
         # For "https://github.com/x/y.git", we'd pull out "y" as the job name
         job_name = runtime_environment.git_repo_name
 
-        if runtime_environment.debug_mode:
-            print(f"DEBUG: WandbTracker {self.tags=}")
         tags = self.tags or []
         tags.insert(0, f"git/{runtime_environment.git_branch}")
-        if runtime_environment.debug_mode:
-            print(f"DEBUG: WandbTracker {tags=}")
 
         # Run wandb init with our extra tracking data.
         notes = f"{runtime_environment.git_message} (git message for {git_ref[:6]})"

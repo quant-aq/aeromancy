@@ -1,7 +1,6 @@
 """Action objects are the core piece of trackable computation in Aeromancy."""
 
 from .artifacts import WandbArtifactName
-from .runtime_environment import get_runtime_environment
 from .tracker import Tracker
 from .wandb_tracker import WandbTracker
 
@@ -75,6 +74,8 @@ class Action:
                 f"Must set project_name on your Action class: {self.__class__}",
             )
 
+        # TODO: Exceptions that happen in this period can get squelched and
+        # tough to debug. We should check for bad interactions with pydoit.
         with self._tracker_class(
             job_type=self.job_type,
             job_group=self.job_group,
@@ -83,14 +84,6 @@ class Action:
             tags=self._tags,
         ) as tracker:
             self.run(tracker)
-
-    def _set_tracker(self, tracker_class: type[Tracker]) -> None:
-        """Set a different class to use for tracking.
-
-        This should only be called under special circumstances (e.g., testing
-        environments, offline mode).
-        """
-        self._tracker_class = tracker_class
 
     def get_io(self, resolve_outputs=False) -> tuple[list[str], list[str]]:
         """Get inputs and outputs for this `Action`.
@@ -125,6 +118,16 @@ class Action:
             ]
         return (full_inputs, full_outputs)
 
+    def _set_tracker(self, tracker_class: type[Tracker]) -> None:
+        """Set a different class to use for tracking.
+
+        This should only be called under special circumstances (e.g., testing
+        environments, offline mode).
+        """
+        # TODO: With some refactoring, this could be combined with
+        # _set_buildtime_properties
+        self._tracker_class = tracker_class
+
     def _set_buildtime_properties(self, project_name: str, skip: bool):
         """Set properties that we won't know until ActionBuilder time."""
         self._skip = skip
@@ -134,8 +137,6 @@ class Action:
         """Set properties that we won't know until ActionRunner time."""
         # TODO: With some refactoring, this could be combined with
         # _set_buildtime_properties
-        if get_runtime_environment().debug_mode:
-            print(f"DEBUG _set_runtime_properties: {tags=}")
         self._tags = tags
 
     skip = property(lambda self: self._skip, doc="Whether this action should be run")
