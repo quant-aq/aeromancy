@@ -55,7 +55,7 @@ class WandbTracker(Tracker):
         if runtime_environment.debug_mode:
             print(f"DEBUG: WandbTracker {self.tags=}")
         tags = self.tags or []
-        tags.insert(f"git/{runtime_environment.git_branch}")
+        tags.insert(0, f"git/{runtime_environment.git_branch}")
         if runtime_environment.debug_mode:
             print(f"DEBUG: WandbTracker {tags=}")
 
