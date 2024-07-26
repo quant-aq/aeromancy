@@ -1,6 +1,7 @@
 """Action objects are the core piece of trackable computation in Aeromancy."""
 
 from .artifacts import WandbArtifactName
+from .runtime_environment import get_runtime_environment
 from .tracker import Tracker
 from .wandb_tracker import WandbTracker
 
@@ -38,6 +39,7 @@ class Action:
         self.parents = parents
         self._tracker_class = WandbTracker
         self._project_name = None
+        self._tags = None
 
     def outputs(self) -> list[str]:
         """Describe what this `Action` will produce after being run.
@@ -132,6 +134,8 @@ class Action:
         """Set properties that we won't know until ActionRunner time."""
         # TODO: With some refactoring, this could be combined with
         # _set_buildtime_properties
+        if get_runtime_environment().debug_mode:
+            print(f"DEBUG _set_runtime_properties: {tags=}")
         self._tags = tags
 
     skip = property(lambda self: self._skip, doc="Whether this action should be run")
