@@ -84,6 +84,7 @@ class FakeTracker(Tracker):
         config: dict | None = None,
         job_type: str | None = None,
         job_group: str | None = None,
+        tags: set[str] | None = None,
     ):
         Tracker.__init__(
             self,
@@ -91,6 +92,7 @@ class FakeTracker(Tracker):
             config=config,
             job_type=job_type,
             job_group=job_group,
+            tags=tags,
         )
 
         self.cache_root_path = Path("~/FakeCache").expanduser().resolve()

@@ -95,6 +95,7 @@ class ActionRunner(TaskLoader2):
         """
         self.actions = actions
         self.job_name_filter = None
+        self.job_tags = []
 
     @override
     def load_doit_config(self):
@@ -106,7 +107,12 @@ class ActionRunner(TaskLoader2):
 
     @override
     def load_tasks(self, **unused) -> list[DoitTask]:
-        return [self._convert_action_to_doittask(action) for action in self.actions]
+        tasks = []
+        for action in self.actions:
+            action._set_runtime_properties(tags=self.job_tags)
+            tasks.append(self._convert_action_to_doittask(action))
+
+        return tasks
 
     def _convert_action_to_doittask(
         self,
@@ -182,6 +188,7 @@ class ActionRunner(TaskLoader2):
         only: str | None,
         graph: bool,
         list_actions: bool,
+        tags: str | None,
         **unused_kwargs,
     ):
         """Run the stored `Action`s using pydoit.
@@ -196,6 +203,8 @@ class ActionRunner(TaskLoader2):
             If True, show the action dependency graph and exit.
         list_actions
             If True, show a list of action names and exit.
+        tags
+            If set, a comma-separated list of tags to apply to all jobs launched.
         unused_kwargs
             Should not be used -- this is here as part of some Click hackery to
             show all options in the help menu.
@@ -217,6 +226,9 @@ class ActionRunner(TaskLoader2):
         if list_actions:
             self._list_actions()
             raise SystemExit
+
+        if tags:
+            self.job_tags = tags.split(",")
 
         if get_runtime_environment().dev_mode:
             console.rule(

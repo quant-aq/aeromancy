@@ -1,4 +1,5 @@
 """Groups of Click options for the main Aeromancy CLI interface."""
+
 import functools
 
 import rich_click as click
@@ -62,10 +63,10 @@ def runner_click_options(function):
     @click.option(
         "--extra-debian-package",
         "extra_debian_packages",
-        metavar="PKGS",
+        metavar="PKG",
         multiple=True,
         help=(
-            "Names of Debian packages to include in the Docker image in addition to "
+            "Name of a Debian package to include in the Docker image in addition to "
             "standard packages required by Aeromancy. Specify this option once per "
             "extra package. You should generally not need to change this, but it may "
             "be set in pdm scripts when setting up a project."
@@ -74,10 +75,10 @@ def runner_click_options(function):
     @click.option(
         "--extra-env-var",
         "extra_env_vars",
-        metavar="VARS",
+        metavar="VAR",
         multiple=True,
         help=(
-            "Extra environment variables to passthrough to Aeromancy. Specify this "
+            "Extra environment variable to passthrough to Aeromancy. Specify this "
             "option once per variable. You should generally not need to change this, "
             "but it may be set in pdm scripts when setting up a project."
         ),
@@ -99,8 +100,8 @@ def runner_click_options(function):
         "aeromain_path",
         default="src/main.py",
         metavar="PATH",
-        # To minimize confusion since this is only intended for
-        # debugging/testing Aeromancy itself.
+        # This is only intended for debugging/testing Aeromancy itself so hidden
+        # to minimize confusion.
         hidden=True,
         help="Set an alternate Aeromain file to run.",
     )
@@ -137,6 +138,13 @@ def aeromancy_click_options(function):
         "--list",
         is_flag=True,
         help="If set: show a list of all job names and exit.",
+    )
+    @click.option(
+        "--tags",
+        "tags",
+        metavar="TAGS",
+        help="Comma-separated tags to add to each task launched. These tags are purely "
+        "for organizational purposes.",
     )
     @runner_click_options
     @functools.wraps(function)

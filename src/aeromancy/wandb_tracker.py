@@ -2,6 +2,7 @@
 
 Weights and Biases is used to track runs and S3 to store artifacts.
 """
+
 from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
@@ -30,6 +31,7 @@ class WandbTracker(Tracker):
         config: dict | None = None,
         job_type: str | None = None,
         job_group: str | None = None,
+        tags: set[str] | None = None,
         quiet: bool = True,
     ):
         Tracker.__init__(
@@ -38,6 +40,7 @@ class WandbTracker(Tracker):
             config=config,
             job_type=job_type,
             job_group=job_group,
+            tags=tags,
         )
 
         self.quiet = quiet
@@ -47,6 +50,9 @@ class WandbTracker(Tracker):
         # For "https://github.com/x/y.git", we'd pull out "y" as the job name
         job_name = runtime_environment.git_repo_name
 
+        tags = self.tags or []
+        tags.insert(f"git/{runtime_environment.git_branch}")
+
         # Run wandb init with our extra tracking data.
         notes = f"{runtime_environment.git_message} (git message for {git_ref[:6]})"
         wandb_run = wandb.init(
@@ -55,7 +61,7 @@ class WandbTracker(Tracker):
             job_type=job_type,
             group=job_group,
             notes=notes,
-            tags=[f"git/{runtime_environment.git_branch}"],
+            tags=tags,
             settings=wandb.Settings(
                 job_name=job_name,
                 git_commit=git_ref,

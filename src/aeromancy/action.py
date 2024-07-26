@@ -78,6 +78,7 @@ class Action:
             job_group=self.job_group,
             config=self.config,
             project_name=self._project_name,
+            tags=self._tags,
         ) as tracker:
             self.run(tracker)
 
@@ -122,9 +123,15 @@ class Action:
             ]
         return (full_inputs, full_outputs)
 
-    def _set_runtime_properties(self, project_name: str, skip: bool):
-        """Set properties that we won't know until we're ready to run."""
+    def _set_buildtime_properties(self, project_name: str, skip: bool):
+        """Set properties that we won't know until ActionBuilder time."""
         self._skip = skip
         self._project_name = project_name
+
+    def _set_runtime_properties(self, tags: list[str] | None = None):
+        """Set properties that we won't know until ActionRunner time."""
+        # TODO: With some refactoring, this could be combined with
+        # _set_buildtime_properties
+        self._tags = tags
 
     skip = property(lambda self: self._skip, doc="Whether this action should be run")
