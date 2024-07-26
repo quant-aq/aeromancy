@@ -6,6 +6,7 @@ code properly.
 You shouldn't ever need to run or call this directly -- the "pdm go" pdm script should
 be setup in pyproject.toml.
 """
+
 import os
 import subprocess
 import sys
@@ -47,9 +48,9 @@ console = Console(theme=custom_theme)
 def interactive(command: str) -> None:
     """Run interactive shell commands."""
     console.log(f"Running {command.strip()!r}", style="info")
-    exit_code = subprocess.call(
+    exit_code = subprocess.call(  # noqa: S602
         command,
-        shell=True,  # noqa: S602
+        shell=True,
         stdout=sys.stdout,
         stderr=subprocess.STDOUT,
     )
@@ -110,13 +111,16 @@ def build_docker(
         (
             "--tag",
             docker_tag,
+            # The version tag should be updated whenever Dockerfile changes.
             "https://github.com/quant-aq/aeromancy.git#v0.1.0:docker",
         ),
     )
     docker_command = " ".join(docker_commmand_pieces)
 
     console.log(f"Running {docker_command!r}", style="info")
-    docker_status, docker_output = subprocess.getstatusoutput(docker_command)
+    docker_status, docker_output = subprocess.getstatusoutput(  # noqa: S605
+        docker_command,
+    )
     if docker_status:
         console.log(f"Docker output: {docker_output}", style="error")
         raise SystemExit(f"Docker exited with {docker_status}")

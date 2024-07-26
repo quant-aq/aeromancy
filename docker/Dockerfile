@@ -2,6 +2,9 @@
 # This creates an image for running Aeromancy tasks, used by runner.py.
 # See Aeromancy scaffolding docs for an overview of how this fits together.
 
+# NOTE: If this file is updated, make a new Aeromancy release and point
+# aeromancy.runner.build_docker to use it.
+
 # This Python version must match a version required by pyproject.toml.
 FROM python:3.10.5-bullseye
 # To set this in Aeromancy, pass --extra-debian-package to `pdm go`.
