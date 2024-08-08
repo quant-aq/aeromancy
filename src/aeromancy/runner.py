@@ -6,6 +6,7 @@ code properly.
 You shouldn't ever need to run or call this directly -- the "pdm go" pdm script should
 be setup in pyproject.toml.
 """
+
 import os
 import subprocess
 import sys
@@ -110,7 +111,7 @@ def build_docker(
         (
             "--tag",
             docker_tag,
-            "https://github.com/quant-aq/aeromancy.git#v0.1.0:docker",
+            "https://github.com/quant-aq/aeromancy.git#v0.2.2:docker",
         ),
     )
     docker_command = " ".join(docker_commmand_pieces)
