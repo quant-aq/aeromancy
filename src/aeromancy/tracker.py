@@ -36,6 +36,7 @@ class Tracker(ABC):
         config: dict | None = None,
         job_type: str | None = None,
         job_group: str | None = None,
+        tags: set[str] | None = None,
     ):
         """Create a Tracker.
 
@@ -46,6 +47,8 @@ class Tracker(ABC):
                 job_group
                     job_type
                         (individual run)
+
+        In addition, a task may be associated with any number of tags.
 
         Parameters
         ----------
@@ -61,11 +64,14 @@ class Tracker(ABC):
         job_group, optional
             Typically used to describe the general goal of a group of tasks
             (e.g., "build", "model")
+        tags, optional
+            List of additional tags (strings) to associate with the task.
         """
         self.project_name = project_name
         self.config = config
         self.job_type = job_type
         self.job_group = job_group
+        self.tags = tags
 
     @abstractmethod
     def __enter__(self):

@@ -1,4 +1,5 @@
 """Extended version of `msgspec.Struct` with easier serialization and validation."""
+
 import json
 import tempfile
 from pathlib import Path

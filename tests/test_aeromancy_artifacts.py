@@ -1,6 +1,5 @@
 """Tests for working with Aeromancy Artifacts."""
 
-
 import pytest
 
 from aeromancy.artifacts import (

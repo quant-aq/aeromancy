@@ -192,10 +192,7 @@ class WandbArtifactName(msgspec.Struct):
         ):
             return False
 
-        if self.artifact_name != other_artifact_name.artifact_name:
-            return False
-
-        return True
+        return self.artifact_name == other_artifact_name.artifact_name
 
     def incorporate_overrides(self):
         """Incorporate artifact version overrides.

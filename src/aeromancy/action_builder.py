@@ -69,7 +69,7 @@ class ActionBuilder:
         -------
             The `Action` passed as `action`, with additional run state added
         """
-        action._set_runtime_properties(self._project_name, skip=skip)
+        action._set_buildtime_properties(self._project_name, skip=skip)
         actions.append(action)
         return action
 
