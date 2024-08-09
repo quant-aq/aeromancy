@@ -112,7 +112,7 @@ def build_docker(
             "--tag",
             docker_tag,
             # The version tag should be updated whenever Dockerfile changes.
-            "https://github.com/quant-aq/aeromancy.git#v0.1.0:docker",
+            "https://github.com/quant-aq/aeromancy.git#v0.2.2:docker",
         ),
     )
     docker_command = " ".join(docker_commmand_pieces)
