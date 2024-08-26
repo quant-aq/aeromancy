@@ -95,7 +95,7 @@ class ActionRunner(TaskLoader2):
         """
         self.actions = actions
         self.job_name_filter = None
-        self.job_tags = []
+        self.job_tags = set()
 
     @override
     def load_doit_config(self):
@@ -228,7 +228,7 @@ class ActionRunner(TaskLoader2):
             raise SystemExit
 
         if tags:
-            self.job_tags = tags.split(",")
+            self.job_tags = set(tags.split(","))
 
         if get_runtime_environment().dev_mode:
             console.rule(

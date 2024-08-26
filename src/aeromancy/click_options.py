@@ -10,7 +10,12 @@ click.rich_click.OPTION_GROUPS = {
     "main.py": [
         {
             "name": "Task runner options",
-            "options": ["--only", "--graph", "--list-actions"],
+            "options": [
+                "--only",
+                "--graph",
+                "--list-actions",
+                "--tags",
+            ],
         },
         {
             "name": "Aeromancy runtime options",

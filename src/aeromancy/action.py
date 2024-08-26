@@ -133,7 +133,7 @@ class Action:
         self._skip = skip
         self._project_name = project_name
 
-    def _set_runtime_properties(self, tags: list[str] | None = None):
+    def _set_runtime_properties(self, tags: set[str] | None = None):
         """Set properties that we won't know until ActionRunner time."""
         # TODO: With some refactoring, this could be combined with
         # _set_buildtime_properties

@@ -111,7 +111,8 @@ def build_docker(
         (
             "--tag",
             docker_tag,
-            # The version tag should be updated whenever Dockerfile changes.
+            # The version tag should be updated whenever ../../docker/Dockerfile
+            # changes.
             "https://github.com/quant-aq/aeromancy.git#v0.2.2:docker",
         ),
     )
@@ -119,7 +120,7 @@ def build_docker(
 
     console.log(f"Running {docker_command!r}", style="info")
     docker_status, docker_output = subprocess.getstatusoutput(  # noqa: S605
-        docker_command,
+        docker_commmand_pieces,
     )
     if docker_status:
         console.log(f"Docker output: {docker_output}", style="error")

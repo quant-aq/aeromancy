@@ -71,7 +71,7 @@ class Tracker(ABC):
         self.config = config
         self.job_type = job_type
         self.job_group = job_group
-        self.tags = tags
+        self.tags = tags or set()
 
     @abstractmethod
     def __enter__(self):

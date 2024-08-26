@@ -50,8 +50,7 @@ class WandbTracker(Tracker):
         # For "https://github.com/x/y.git", we'd pull out "y" as the job name
         job_name = runtime_environment.git_repo_name
 
-        tags = self.tags or []
-        tags.insert(0, f"git/{runtime_environment.git_branch}")
+        self.tags.add(f"git/{runtime_environment.git_branch}")
 
         # Run wandb init with our extra tracking data.
         notes = f"{runtime_environment.git_message} (git message for {git_ref[:6]})"
@@ -61,7 +60,7 @@ class WandbTracker(Tracker):
             job_type=job_type,
             group=job_group,
             notes=notes,
-            tags=tags,
+            tags=self.tags,
             settings=wandb.Settings(
                 job_name=job_name,
                 git_commit=git_ref,
