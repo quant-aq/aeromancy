@@ -49,7 +49,7 @@ console = Console(theme=custom_theme)
 def interactive(command_pieces: list[str]) -> None:
     """Run interactive shell commands."""
     formatted_pieces = shlex.join(command_pieces)
-    console.log(f"Running {formatted_pieces}", style="info")
+    console.log(f"[bold]Running:[/bold] {formatted_pieces}", style="info")
     exit_code = subprocess.call(
         command_pieces,
         stdout=sys.stdout,
