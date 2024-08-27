@@ -9,7 +9,8 @@ class Action:
     """A specific piece of work to track.
 
     This includes the code to run, artifacts it depends on, and artifacts it
-    produces. For organizational purposes, they can fill in class variables:
+    produces. For organizational purposes, subclasses can fill in class
+    variables:
 
     - `job_type`
     - `job_group`
