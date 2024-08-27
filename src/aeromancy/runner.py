@@ -209,7 +209,7 @@ def run_docker(
             "--env-file",
             env_filename,
             "-v",
-            f"{local_cache_path!s}:/root/Cache",
+            f"{local_cache_path}:/root/Cache",
             *extra_docker_run_args,
             "-it",
             docker_tag,
