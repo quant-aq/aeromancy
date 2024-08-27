@@ -185,10 +185,10 @@ class ActionRunner(TaskLoader2):
 
     def run_actions(
         self,
-        only: str | None,
+        only: set[str] | None,
         graph: bool,
         list_actions: bool,
-        tags: str | None,
+        tags: set[str] | None,
         **unused_kwargs,
     ):
         """Run the stored `Action`s using pydoit.
@@ -212,7 +212,7 @@ class ActionRunner(TaskLoader2):
         if only:
 
             def job_name_filter(job_name):
-                for job_name_substring in only.split(","):
+                for job_name_substring in only:
                     if job_name_substring.strip() in job_name:
                         return True
                 return False
@@ -227,8 +227,7 @@ class ActionRunner(TaskLoader2):
             self._list_actions()
             raise SystemExit
 
-        if tags:
-            self.job_tags = set(tags.split(","))
+        self.job_tags = tags
 
         if get_runtime_environment().dev_mode:
             console.rule(

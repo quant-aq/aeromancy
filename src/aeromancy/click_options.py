@@ -1,6 +1,7 @@
 """Groups of Click options for the main Aeromancy CLI interface."""
 
 import functools
+import shlex
 
 import rich_click as click
 
@@ -31,6 +32,14 @@ click.rich_click.OPTION_GROUPS = {
         },
     ],
 }
+
+
+def csv_string_to_set(ctx, param, value) -> set[str] | None:
+    """Parse a CSV string into a set of strings."""
+    if value is not None:
+        return {piece.strip() for piece in value.split(",")}
+
+    return None
 
 
 def runner_click_options(function):
@@ -64,6 +73,8 @@ def runner_click_options(function):
             "mount). You should generally not need to change this, but it may be "
             "set in pdm scripts when setting up a project."
         ),
+        # Parse a string into a list honoring shell-style quoting.
+        callback=lambda ctx, param, value: shlex.split(value),
     )
     @click.option(
         "--extra-debian-package",
@@ -131,7 +142,8 @@ def aeromancy_click_options(function):
         type=str,
         metavar="SUBSTRS",
         help="If set: comma-separated list of substrings. We'll only run jobs which "
-        "match at least one of these (in dependency order).",
+        "match at least one of these.",
+        callback=csv_string_to_set,
     )
     @click.option(
         "--graph",
@@ -150,6 +162,7 @@ def aeromancy_click_options(function):
         metavar="TAGS",
         help="Comma-separated tags to add to each task launched. These tags are purely "
         "for organizational purposes.",
+        callback=csv_string_to_set,
     )
     @runner_click_options
     @functools.wraps(function)
