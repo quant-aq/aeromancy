@@ -9,7 +9,8 @@ class Action:
     """A specific piece of work to track.
 
     This includes the code to run, artifacts it depends on, and artifacts it
-    produces. For organizational purposes, they can fill in class variables:
+    produces. For organizational purposes, subclasses can fill in class
+    variables:
 
     - `job_type`
     - `job_group`
@@ -38,6 +39,7 @@ class Action:
         self.parents = parents
         self._tracker_class = WandbTracker
         self._project_name = None
+        self._tags = None
 
     def outputs(self) -> list[str]:
         """Describe what this `Action` will produce after being run.
@@ -73,21 +75,16 @@ class Action:
                 f"Must set project_name on your Action class: {self.__class__}",
             )
 
+        # TODO: Exceptions that happen in this period can get squelched and
+        # tough to debug. We should check for bad interactions with pydoit.
         with self._tracker_class(
             job_type=self.job_type,
             job_group=self.job_group,
             config=self.config,
             project_name=self._project_name,
+            tags=self._tags,
         ) as tracker:
             self.run(tracker)
-
-    def _set_tracker(self, tracker_class: type[Tracker]) -> None:
-        """Set a different class to use for tracking.
-
-        This should only be called under special circumstances (e.g., testing
-        environments, offline mode).
-        """
-        self._tracker_class = tracker_class
 
     def get_io(self, resolve_outputs=False) -> tuple[list[str], list[str]]:
         """Get inputs and outputs for this `Action`.
@@ -122,9 +119,25 @@ class Action:
             ]
         return (full_inputs, full_outputs)
 
-    def _set_runtime_properties(self, project_name: str, skip: bool):
-        """Set properties that we won't know until we're ready to run."""
+    def _set_tracker(self, tracker_class: type[Tracker]) -> None:
+        """Set a different class to use for tracking.
+
+        This should only be called under special circumstances (e.g., testing
+        environments, offline mode).
+        """
+        # TODO: With some refactoring, this could be combined with
+        # _set_buildtime_properties
+        self._tracker_class = tracker_class
+
+    def _set_buildtime_properties(self, project_name: str, skip: bool):
+        """Set properties that we won't know until ActionBuilder time."""
         self._skip = skip
         self._project_name = project_name
+
+    def _set_runtime_properties(self, tags: set[str] | None = None):
+        """Set properties that we won't know until ActionRunner time."""
+        # TODO: With some refactoring, this could be combined with
+        # _set_buildtime_properties
+        self._tags = tags
 
     skip = property(lambda self: self._skip, doc="Whether this action should be run")

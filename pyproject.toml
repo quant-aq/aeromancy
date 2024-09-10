@@ -76,6 +76,10 @@ doc.shell = "cd docs && mkdocs serve -a localhost:8030"
 lint.help = "Run linters over all files"
 lint.cmd = "pre-commit run --all-files"
 
+# PDM hook to automatically sort dependencies when they change.
+# "true" is there since GitHub Actions will fail if this returns a non-zero exit code.
+post_install.shell = "pre-commit run keep-sorted --files pyproject.toml > /dev/null 2> /dev/null; true"
+
 #
 # Aeromancy-specific scripts.
 #
@@ -100,7 +104,13 @@ line-length = 88
 target-version = ["py310"]
 
 [tool.ruff]
+src = ["src"]
 line-length = 88
+extend-exclude = ["tests/fixtures", "__pycache__"]
+target-version = "py310"
+namespace-packages = ["docs", "tasks"]
+
+[tool.ruff.lint]
 select = [
   # keep-sorted start
   "ASYNC", # flake8-async
@@ -148,6 +158,7 @@ ignore = [
   # keep-sorted start
   "D203",   # one-blank-line-before-class (incompatible with D211)
   "D213",   # multi-line-summary-second-line (incompatible with D212)
+  "D413",   # blank-line-after-last-section (not needed for numpy conventions)
   "PGH003", # blanket-type-ignore: Use specific rule codes when ignoring type issues (no always feasible)
   "RET504", # unnecessary-assign: Sometimes worth doing for readability
   "RET505", # superfluous-else-return: Currently has a bug
@@ -159,15 +170,11 @@ ignore = [
   "TRY003", # raise-vanilla-args: Not for prototyping, not always an error
   # keep-sorted end
 ]
-src = ["src"]
-extend-exclude = ["tests/fixtures", "__pycache__"]
-target-version = "py310"
-namespace-packages = ["docs", "tasks"]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "**/tests/*" = ["S101"]  # Allow using asserts in tests
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 known-first-party = ["aeromancy"]
 
 [tool.mypy]

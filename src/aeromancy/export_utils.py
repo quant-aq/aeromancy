@@ -6,6 +6,7 @@ sometimes you just need to pull an artifact out and analyze it in a Notebook.
 Warning: Here be dragons (*cough* hacks). Code in this module relies on
 Aeromancy internals and is subject to change.
 """
+
 import os
 from collections.abc import Sequence
 from pathlib import Path

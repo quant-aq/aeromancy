@@ -8,6 +8,7 @@ be setup in pyproject.toml.
 """
 
 import os
+import shlex
 import subprocess
 import sys
 from pathlib import Path
@@ -45,17 +46,17 @@ custom_theme = Theme({"info": "dim cyan", "warning": "magenta", "error": "bold r
 console = Console(theme=custom_theme)
 
 
-def interactive(command: str) -> None:
+def interactive(command_pieces: list[str]) -> None:
     """Run interactive shell commands."""
-    console.log(f"Running {command.strip()!r}", style="info")
+    formatted_pieces = shlex.join(command_pieces)
+    console.log(f"[bold]Running:[/bold] {formatted_pieces}", style="info")
     exit_code = subprocess.call(
-        command,
-        shell=True,  # noqa: S602
+        command_pieces,
         stdout=sys.stdout,
         stderr=subprocess.STDOUT,
     )
     if exit_code:
-        console.log(f"Exit code {exit_code} for {command!r}", style="warning")
+        console.log(f"Exit code {exit_code} for {formatted_pieces}", style="warning")
 
 
 def check_git_state() -> None:
@@ -90,12 +91,13 @@ def build_docker(
 
     Returns the hash of the Docker image.
     """
+    ssh_auth_sock = os.environ.get("SSH_AUTH_SOCK", "")
     docker_commmand_pieces = [
         "docker",
         "buildx",
         "build",
         # Forward SSH authorization so we can access private repos.
-        "--ssh=default=$SSH_AUTH_SOCK",
+        f"--ssh=default={ssh_auth_sock}",
         # Add local project (i.e., not Aeromancy's repo) as a build context so
         # we can copy project-specific files to the image.
         "--build-context",
@@ -111,16 +113,34 @@ def build_docker(
         (
             "--tag",
             docker_tag,
+            # The version tag should be updated whenever ../../docker/Dockerfile
+            # changes.
             "https://github.com/quant-aq/aeromancy.git#v0.2.2:docker",
         ),
     )
-    docker_command = " ".join(docker_commmand_pieces)
 
-    console.log(f"Running {docker_command!r}", style="info")
-    docker_status, docker_output = subprocess.getstatusoutput(docker_command)
+    console.log(
+        f"[bold]Building Docker image:[/bold] {shlex.join(docker_commmand_pieces)}",
+        style="info",
+    )
+    try:
+        docker_output = subprocess.check_output(
+            docker_commmand_pieces,
+            text=True,
+            stderr=subprocess.STDOUT,
+        )
+        docker_status = 0
+    except subprocess.CalledProcessError as cpe:
+        docker_output = cpe.output
+        docker_status = cpe.returncode
+
+    if docker_status or not quiet:
+        console.log(
+            f"Docker output:\n{docker_output}",
+            style="error" if docker_status else "info",
+        )
     if docker_status:
-        console.log(f"Docker output: {docker_output}", style="error")
-        raise SystemExit(f"Docker exited with {docker_status}")
+        raise SystemExit(f"Docker image building failed with exit code {docker_status}")
     return docker_output.strip()
 
 
@@ -177,13 +197,24 @@ def store_environment_variables(
 def run_docker(
     env_filename: str,
     docker_tag: str,
-    docker_subcommand: str,
-    extra_docker_run_args: str,
+    docker_subcommand_pieces: list[str],
+    extra_docker_run_args: list[str],
 ) -> None:
     """Run `docker run` with specified arguments."""
+    local_cache_path = Path("~/Cache").expanduser()
     interactive(
-        f"docker run --env-file {env_filename} -v ~/Cache:/root/Cache "
-        f"{extra_docker_run_args} -it {docker_tag} {docker_subcommand}",
+        [
+            "docker",
+            "run",
+            "--env-file",
+            env_filename,
+            "-v",
+            f"{local_cache_path}:/root/Cache",
+            *extra_docker_run_args,
+            "-it",
+            docker_tag,
+            *docker_subcommand_pieces,
+        ],
     )
 
 
@@ -198,7 +229,7 @@ def run_docker(
 def main(
     debug_shell: bool,
     dev: bool,
-    extra_docker_run_args: str,
+    extra_docker_run_args: list[str],
     extra_debian_packages: list[str],
     extra_env_vars: list[str],
     artifact_overrides: list[str],
@@ -229,6 +260,11 @@ def main(
             extra_debian_packages=extra_debian_packages,
             quiet=not debug,
         )
+        if debug:
+            # Building Docker images in debug mode makes it tough to determine
+            # the image hash, so we'll set it to a special value.
+            # TODO: Parse Docker image hash in these cases?
+            docker_hash = "debug_docker_hash"
     env_filename = store_environment_variables(
         git_ref=git_ref,
         docker_hash=docker_hash,
@@ -238,18 +274,29 @@ def main(
         extra_env_vars=extra_env_vars,
     )
 
-    formatted_extra_cmdline_args = " ".join(extra_cmdline_args)
     if debug_shell:
-        docker_subcommand = f"/bin/sh {formatted_extra_cmdline_args}"
+        docker_subcommand_pieces = [
+            "/bin/sh",
+            *extra_cmdline_args,
+        ]
     else:
-        docker_subcommand = (
-            f"pdm run python {aeromain_path} {formatted_extra_cmdline_args}"
-        )
+        docker_subcommand_pieces = [
+            "pdm",
+            "run",
+            "python",
+            aeromain_path,
+            *extra_cmdline_args,
+        ]
 
     if dev:
-        interactive(docker_subcommand)
+        interactive(docker_subcommand_pieces)
     else:
-        run_docker(env_filename, docker_tag, docker_subcommand, extra_docker_run_args)
+        run_docker(
+            env_filename,
+            docker_tag,
+            docker_subcommand_pieces,
+            extra_docker_run_args,
+        )
 
 
 if __name__ == "__main__":

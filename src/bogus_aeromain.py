@@ -6,9 +6,8 @@ This is enough to test both `--dev` mode. You can launch it with something like:
 
 Beyond that, flags are as they would be for a normal `pdm go` in an Aeromancy
 project repo.
-
-TODO: Full Docker integration doesn't currently work.
 """
+
 from pathlib import Path
 
 import rich_click as click
