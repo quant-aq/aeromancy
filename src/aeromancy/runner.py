@@ -104,8 +104,7 @@ def build_docker(
         "project=.",
     ]
     if extra_debian_packages:
-        # Format with !r (repr()) to automatically handle spaces and escaping.
-        build_arg = f"EXTRA_DEBIAN_PACKAGES={' '.join(extra_debian_packages)!r}"
+        build_arg = f"EXTRA_DEBIAN_PACKAGES={' '.join(extra_debian_packages)}"
         docker_commmand_pieces.extend(("--build-arg", build_arg))
     if quiet:
         docker_commmand_pieces.append("--quiet")
