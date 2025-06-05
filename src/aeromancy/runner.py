@@ -41,6 +41,9 @@ PASSTHROUGH_ENV_VARIABLES = (
     "WANDB_API_KEY",
 )
 
+# The version tag should be updated whenever ../../docker/Dockerfile changes.
+DEFAULT_DOCKERFILE = "https://github.com/quant-aq/aeromancy.git#v0.2.2:docker"
+
 repo = Repo(".")
 custom_theme = Theme({"info": "dim cyan", "warning": "magenta", "error": "bold red"})
 console = Console(theme=custom_theme)
@@ -86,6 +89,7 @@ def build_docker(
     docker_tag: str,
     extra_debian_packages: list[str],
     quiet: bool = True,
+    docker_file: str | None = None,
 ) -> str:
     """Build our Docker image for running experiments.
 
@@ -108,13 +112,12 @@ def build_docker(
         docker_commmand_pieces.extend(("--build-arg", build_arg))
     if quiet:
         docker_commmand_pieces.append("--quiet")
+    docker_file = docker_file or DEFAULT_DOCKERFILE
     docker_commmand_pieces.extend(
         (
             "--tag",
             docker_tag,
-            # The version tag should be updated whenever ../../docker/Dockerfile
-            # changes.
-            "https://github.com/quant-aq/aeromancy.git#v0.2.2:docker",
+            docker_file,
         ),
     )
 
@@ -235,6 +238,7 @@ def main(
     extra_cmdline_args: list[str],
     debug: bool,
     aeromain_path: str,
+    docker_file: str | None,
 ) -> None:
     """Run Aeromancy as a CLI application."""
     if debug_shell or dev:
@@ -258,6 +262,7 @@ def main(
             docker_tag=docker_tag,
             extra_debian_packages=extra_debian_packages,
             quiet=not debug,
+            docker_file=docker_file,
         )
         if debug:
             # Building Docker images in debug mode makes it tough to determine

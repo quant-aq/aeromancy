@@ -112,6 +112,15 @@ def runner_click_options(function):
         multiple=True,
     )
     @click.option(
+        "--docker-file",
+        "docker_file",
+        metavar="PATH",
+        # This is only intended for debugging/testing Aeromancy itself so hidden
+        # to minimize confusion.
+        hidden=True,
+        help="Set an alternate Dockerfile file to run.",
+    )
+    @click.option(
         "--aeromain",
         "aeromain_path",
         default="src/main.py",
